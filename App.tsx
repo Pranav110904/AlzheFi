@@ -1,45 +1,87 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { useEffect,useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import { AuthProvider, useAuth } from './Src/Context/AuthContext';
+import AuthNavigator from './Src/Navigation/AuthNavigator';
+import AppNavigator from './Src/Navigation/AppNavigator';
+import IntroScreen from './Src/Screens/IntroScreen';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+
+const Stack = createNativeStackNavigator();
+
+function RootNavigator() {
+  const { state, bootstrapAsync } = useAuth();
+  const [appState, setAppState] = useState<
+    'loading' | 'intro' | 'auth' | 'app'
+  >('loading');
+
+  useEffect(() => {
+    initializeApp();
+  }, []);
+
+  const initializeApp = async () => {
+    await bootstrapAsync();
+
+    const hasLaunched = await AsyncStorage.getItem('hasLaunched');
+
+    if (!hasLaunched) {
+      await AsyncStorage.setItem('hasLaunched', 'true');
+      setAppState('intro');
+      return;
+    }
+
+    if (state.userToken) {
+      setAppState('app');
+    } else {
+      setAppState('auth');
+    }
+  };
+
+  // React when token changes (after login)
+useEffect(() => {
+  if (state.userToken) {
+    setAppState('app');
+  } else {
+    setAppState('auth');
+  }
+}, [state.userToken]);
+
+  if (appState === 'loading') return null;
 
   return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+
+        {appState === 'intro' && (
+          <Stack.Screen name="Intro">
+            {(props) => (
+              <IntroScreen
+                {...props}
+                onFinish={() => setAppState('auth')}
+              />
+            )}
+          </Stack.Screen>
+        )}
+
+        {appState === 'auth' && (
+          <Stack.Screen name="Auth" component={AuthNavigator} />
+        )}
+
+        {appState === 'app' && (
+          <Stack.Screen name="App" component={AppNavigator} />
+        )}
+
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
+export default function App() {
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
+    <AuthProvider>
+      <RootNavigator />
+    </AuthProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;

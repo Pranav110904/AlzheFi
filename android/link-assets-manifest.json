@@ -1,0 +1,221 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Coolvetica-Crammed-Book.otf",
+      "sha1": "18fa02a08a47452901d07235ed94fcb30f5ae6fa"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Compressed-Extra-Light.otf",
+      "sha1": "28e14f152b35f869d9280f575f25eb2235a482fb"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Ultra-Light-Regular.otf",
+      "sha1": "7e62c375932fdef78687055a5cc4d8b1beafd054"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Compressed.otf",
+      "sha1": "a89004d18174cf078014f2b05ebb266e61210bd0"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Crammed-Bold.otf",
+      "sha1": "099971495e050364d2305644185ddc54273fdc04"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Extra-Light-Italic.otf",
+      "sha1": "734d6b6ba65d3ff6cd1502d8200b051a640755fb"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Crammed-Extra-Light.otf",
+      "sha1": "4d1ac7a40006434e23e4ed957616ec2a0c8f1c40"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Condensed-Extra-Light.otf",
+      "sha1": "396e49171a25d507c8a28596ed98973390648702"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Heavy-Italic.otf",
+      "sha1": "e39fb7db4250ccf6fd40c56f61c8905803fc617a"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Crammed-Light.otf",
+      "sha1": "620705e29332fdd884cb92f5d10d9f365e4c8028"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Compressed-Light.otf",
+      "sha1": "8c10b394f6e229f92901a2a17b83c1288ff09fba"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Ultra-Light-Italic.otf",
+      "sha1": "b2219aa5d6e572efb4aa675d00fbceb8d5a15bdb"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Book-Italic.otf",
+      "sha1": "78acd5151c6286af16ffb93a7fd22c4174036012"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Light-Italic.otf",
+      "sha1": "777ad49180c3aa8e3791c59150034d4bab07e6ae"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Bold.otf",
+      "sha1": "291f4c5584f9c177f2ebde6cd78fe2ebb10e4e34"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Compressed-Heavy.otf",
+      "sha1": "e818714bd4f89e2b907da6098dc940a121e6a364"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Crammed-Heavy.otf",
+      "sha1": "2f63e946e5a6a1dbd7926c01a3be92d3a28b91c7"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Bold-Italic.otf",
+      "sha1": "d86f6739779a92c41303e9ac1fba7f7be399138e"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Heavy-Regular.otf",
+      "sha1": "68b0de8e0f3ea855e24e64f53b78756dcfc46653"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Condensed-Light.otf",
+      "sha1": "d20544ff730f0e8270e360f95c8d150cfa218845"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Crammed.otf",
+      "sha1": "de8f0ff1945e1943fe0bd80d582ad4a4d55c7b59"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Crammed-Ultra-Light.otf",
+      "sha1": "a2bee3588f3a7ab99ae854a6827ce840ae64aff7"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Condensed-Ultra-Light.otf",
+      "sha1": "5be868c25add9963f0b1ef6a884a572378aa3165"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Book-Regular.otf",
+      "sha1": "f4b3334d6d35ac3b7d962da3c44d55fc3e7c63ff"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Condensed-Bold.otf",
+      "sha1": "e10f2d2f73bf641660b89fdc0f37f902a600b56c"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Compressed-Ultra-Light.otf",
+      "sha1": "37dbe6f58483bc52af8a5ffba6251156ccfdcea7"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Extra-Light-Regular.otf",
+      "sha1": "ac6df70986ca1153d376f04d39bba29f1fe7c4ae"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Condensed-Book.otf",
+      "sha1": "e22cd8717e204481526d66c5b0198650ebae212b"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Regular.otf",
+      "sha1": "daa7659a2547450631adc645428b32deaccf113c"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Compressed-Book.otf",
+      "sha1": "9397e0c16a7edc512c81945de75c77a9c80a39db"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Condensed.otf",
+      "sha1": "acf4bdaa2e4a26efb5b447f57edf73d6b16f9152"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Light-Regular.otf",
+      "sha1": "2908b3183a4d3ed8dd36aac864d3e539efdeb47e"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Compressed-Bold.otf",
+      "sha1": "2ca8ca62d5d30e2a4282c9d964e9a8c86bbe7a7e"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Condensed-Heavy.otf",
+      "sha1": "5d808812f45f928b90efed44c9bfaf3c198854d5"
+    },
+    {
+      "path": "assets/fonts/Coolvetica-Italic.otf",
+      "sha1": "e56f651d17fe5da0d77692b0e65d769c19050307"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+      "sha1": "c090a3ec96a3f1bb9b615c2f3f204ce0dcdcdbc3"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+      "sha1": "56acefc0731f35ee23b195b1c8cb5fa94a0db97b"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+      "sha1": "e6604258b1ced5efd51360875d782fca65381d47"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/FontAwesome6_Regular.ttf",
+      "sha1": "775e2ecfc18d22b177274453d4c014ca6be63208"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+      "sha1": "12b5670eb178138f77285d5f2c246d3cc5fa67d6"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+      "sha1": "3fa2d67cef22da5c3f3eb5730c6afbd6fecf0372"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+      "sha1": "4c2a838b00dbb5e8bb1b368fce0de534e8eb241c"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+      "sha1": "4e77868439280fb434d4697c7b911271406c81f3"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+      "sha1": "4b2bce6c792493a4a5716b6fec2dbefe89492c3f"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+      "sha1": "86e07c3d974eb09099e6e5a9b3b8310303cf0feb"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+      "sha1": "c1b9fae262f42868c075ac865a8ab34920e20a2c"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+      "sha1": "7d849a3981a716e2ba4a84634bc57d0b8054a6a3"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+      "sha1": "13b1eab65a983c7a73bc7997c479d66943f7c6cb"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+      "sha1": "6a48a962b06cc3acbdfd61df0d9a34744eea5e8d"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+      "sha1": "91d377ea3cf47490b256c2ed081704a7dabdae0c"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf",
+      "sha1": "2b8e11389d98122399667cf64941eb58497dc128"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+      "sha1": "9ffb81a5a11112e292f2cc323e98486bad597599"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf",
+      "sha1": "7ce89c71d5a51ac65b159c71422783dd86529c66"
+    },
+    {
+      "path": "node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+      "sha1": "7e02c3f005532ff4d24148567c84089756a7848a"
+    }
+  ]
+}

@@ -1,9 +1,20 @@
 # OSX
 #
 .DS_Store
-
+.env
 # Xcode
 #
+
+
+
+node_modules/
+android/build/
+ios/build/
+.env
+.expo/
+dist/
+
+log.txt
 build/
 *.pbxuser
 !default.pbxuser

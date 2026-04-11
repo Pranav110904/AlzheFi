@@ -34,7 +34,7 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -56,5 +56,62 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Coolvetica-Crammed-Book.otf</string>
+		<string>Coolvetica-Compressed-Extra-Light.otf</string>
+		<string>Coolvetica-Ultra-Light-Regular.otf</string>
+		<string>Coolvetica-Compressed.otf</string>
+		<string>Coolvetica-Crammed-Bold.otf</string>
+		<string>Coolvetica-Extra-Light-Italic.otf</string>
+		<string>Coolvetica-Crammed-Extra-Light.otf</string>
+		<string>Coolvetica-Condensed-Extra-Light.otf</string>
+		<string>Coolvetica-Heavy-Italic.otf</string>
+		<string>Coolvetica-Crammed-Light.otf</string>
+		<string>Coolvetica-Compressed-Light.otf</string>
+		<string>Coolvetica-Ultra-Light-Italic.otf</string>
+		<string>Coolvetica-Book-Italic.otf</string>
+		<string>Coolvetica-Light-Italic.otf</string>
+		<string>Coolvetica-Bold.otf</string>
+		<string>Coolvetica-Compressed-Heavy.otf</string>
+		<string>Coolvetica-Crammed-Heavy.otf</string>
+		<string>Coolvetica-Bold-Italic.otf</string>
+		<string>Coolvetica-Heavy-Regular.otf</string>
+		<string>Coolvetica-Condensed-Light.otf</string>
+		<string>Coolvetica-Crammed.otf</string>
+		<string>Coolvetica-Crammed-Ultra-Light.otf</string>
+		<string>Coolvetica-Condensed-Ultra-Light.otf</string>
+		<string>Coolvetica-Book-Regular.otf</string>
+		<string>Coolvetica-Condensed-Bold.otf</string>
+		<string>Coolvetica-Compressed-Ultra-Light.otf</string>
+		<string>Coolvetica-Extra-Light-Regular.otf</string>
+		<string>Coolvetica-Condensed-Book.otf</string>
+		<string>Coolvetica-Regular.otf</string>
+		<string>Coolvetica-Compressed-Book.otf</string>
+		<string>Coolvetica-Condensed.otf</string>
+		<string>Coolvetica-Light-Regular.otf</string>
+		<string>Coolvetica-Compressed-Bold.otf</string>
+		<string>Coolvetica-Condensed-Heavy.otf</string>
+		<string>Coolvetica-Italic.otf</string>
+		<string>Fontisto.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome6_Regular.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>AntDesign.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>Zocial.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>FontAwesome6_Solid.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>FontAwesome6_Brands.ttf</string>
+		<string>MaterialIcons.ttf</string>
+	</array>
 </dict>
 </plist>

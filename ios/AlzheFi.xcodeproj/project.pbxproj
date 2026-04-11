@@ -12,6 +12,60 @@
 		46ECA91A0F3699BD7318A05A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		6620D8A2FF8E4D239F4D6CC2 /* Coolvetica-Crammed-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D2BC40531ED4012BCE7DCD8 /* Coolvetica-Crammed-Book.otf */; };
+		E9BF9708776F46F2B72CCFE7 /* Coolvetica-Compressed-Extra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F9122E85AB004BC6A1F247E0 /* Coolvetica-Compressed-Extra-Light.otf */; };
+		519BFAA7A1104F4886C56288 /* Coolvetica-Ultra-Light-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C556CE6C6744B67ADE6CD95 /* Coolvetica-Ultra-Light-Regular.otf */; };
+		FE3FDB5511574E40B5BEEF8C /* Coolvetica-Compressed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D0247B125B9431C87694AB2 /* Coolvetica-Compressed.otf */; };
+		B35995DBE2684AA8946500AF /* Coolvetica-Crammed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 276E1AFE823044CB95D0BBEA /* Coolvetica-Crammed-Bold.otf */; };
+		19C0E6AB015143E99C083027 /* Coolvetica-Extra-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F5C8D7F35D54B17AF0C6792 /* Coolvetica-Extra-Light-Italic.otf */; };
+		89BCB3DBBB3F4F49B0DCDF59 /* Coolvetica-Crammed-Extra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A7F40FAFD65D4C379F6CAAE5 /* Coolvetica-Crammed-Extra-Light.otf */; };
+		90D43E5D443948DE87819520 /* Coolvetica-Condensed-Extra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 368872EEF56E44D68C29F26F /* Coolvetica-Condensed-Extra-Light.otf */; };
+		4F5B72FFDA884B8EBC5A1553 /* Coolvetica-Heavy-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCBFBAE940064B5F8A1B1FBF /* Coolvetica-Heavy-Italic.otf */; };
+		65B968E8C6734E9E80346C46 /* Coolvetica-Crammed-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF95F2751EA14C0D837F1786 /* Coolvetica-Crammed-Light.otf */; };
+		83A2F741984C4D4493644D9D /* Coolvetica-Compressed-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B0F47C4F7D14BB4AE81A78F /* Coolvetica-Compressed-Light.otf */; };
+		1A0C9E809C33439A97934B25 /* Coolvetica-Ultra-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B889CE5A6021494492085D63 /* Coolvetica-Ultra-Light-Italic.otf */; };
+		65D5CF287D054CC4946BFE01 /* Coolvetica-Book-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07DE9CD5E69247C18CC5E2AC /* Coolvetica-Book-Italic.otf */; };
+		83F771DB062E4770A9ED040A /* Coolvetica-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC4673C8A6564C7B883A9EC0 /* Coolvetica-Light-Italic.otf */; };
+		B3E1DF3B45984438A72D97D4 /* Coolvetica-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FB28F9D8223411E9AFEAC5F /* Coolvetica-Bold.otf */; };
+		FDED9021812D4741966F4261 /* Coolvetica-Compressed-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35357CFD83DE451A9B6097B3 /* Coolvetica-Compressed-Heavy.otf */; };
+		8FD392E1ED524337A3A9D343 /* Coolvetica-Crammed-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA0D1E0643774E4C96C150A8 /* Coolvetica-Crammed-Heavy.otf */; };
+		7DCFEBAAA09943D29D2EF8AF /* Coolvetica-Bold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0B8501883F454FFA8318E413 /* Coolvetica-Bold-Italic.otf */; };
+		4AD6291AD7654F6E9F2164DA /* Coolvetica-Heavy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D2B5A16A788C477BB939B457 /* Coolvetica-Heavy-Regular.otf */; };
+		CEAC579D9E124B6DB0E958E7 /* Coolvetica-Condensed-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E38D077575E9404FB238AFB0 /* Coolvetica-Condensed-Light.otf */; };
+		BBF9542EF44946DF9AE2756D /* Coolvetica-Crammed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96EC3B51340F4315A0CB59FE /* Coolvetica-Crammed.otf */; };
+		B8E23EC21F0B4AB8AA6B2262 /* Coolvetica-Crammed-Ultra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BF5A5EE6394E41B709797B /* Coolvetica-Crammed-Ultra-Light.otf */; };
+		4B983B5D22F84AB692A089B0 /* Coolvetica-Condensed-Ultra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A780C55464240D38D76005A /* Coolvetica-Condensed-Ultra-Light.otf */; };
+		E7048C3AC08449679F1098D0 /* Coolvetica-Book-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 58A985C4541D454182B062B8 /* Coolvetica-Book-Regular.otf */; };
+		F0BAA7270EA1495D8B09CD44 /* Coolvetica-Condensed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F903654FACF4423FB88CB69F /* Coolvetica-Condensed-Bold.otf */; };
+		31DC8DC7134F422A899F95A7 /* Coolvetica-Compressed-Ultra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80FE49DCDAB34D878A61CA45 /* Coolvetica-Compressed-Ultra-Light.otf */; };
+		6C587348DCF7478D90912C36 /* Coolvetica-Extra-Light-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B026E494FDA41A3BCCCA8EE /* Coolvetica-Extra-Light-Regular.otf */; };
+		64897F609883453BB916D160 /* Coolvetica-Condensed-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = FFF6D1A7012240FC9C2EBAEF /* Coolvetica-Condensed-Book.otf */; };
+		7AF974AF046C47EB914BE0B0 /* Coolvetica-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0596A1DC5677497FB752B37E /* Coolvetica-Regular.otf */; };
+		E97CA61708B1478BA1ACB8BA /* Coolvetica-Compressed-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8750B4E978954ACB953E3A32 /* Coolvetica-Compressed-Book.otf */; };
+		95CAC6EE3716431FBB43D12B /* Coolvetica-Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 976B6B20081B4D20BDF9E3A8 /* Coolvetica-Condensed.otf */; };
+		943137E6532244CBAB1135A7 /* Coolvetica-Light-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FABA8B1229D48FA93D807F4 /* Coolvetica-Light-Regular.otf */; };
+		CFDE71315EDB46D8A165EC1B /* Coolvetica-Compressed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71742B65038E4530AD9C45C4 /* Coolvetica-Compressed-Bold.otf */; };
+		E95B28E308E7476CB6EAA236 /* Coolvetica-Condensed-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = B86471B473CB489CA0231089 /* Coolvetica-Condensed-Heavy.otf */; };
+		B3E2C7E797374FDEA2A63E5C /* Coolvetica-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC5E03EE96FF4879911BA455 /* Coolvetica-Italic.otf */; };
+		FEE22E5A8B284EF6ABB0801F /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24EA3F78ACF48A0A994CB02 /* Fontisto.ttf */; };
+		2C9B17EE42814CBCAB0B361F /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD9D3148EAEA431AA737DB92 /* Octicons.ttf */; };
+		04DC1CBC4AA14CB385348687 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90DEE6C6B16D4BE587623CE5 /* Feather.ttf */; };
+		74E2E5C858DF4E9982F5099F /* FontAwesome6_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B5055111FA347AB80BD71B3 /* FontAwesome6_Regular.ttf */; };
+		039948B3A04146B9AA302DB0 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40675A6DF75C486793A539D0 /* Entypo.ttf */; };
+		13BB5C2AB49C45FF91C8C2D1 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9333C55ED2D4ADF976726DB /* FontAwesome5_Brands.ttf */; };
+		5395BCF1660B44D1904D337D /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1304717572C4BEA92E159EB /* MaterialCommunityIcons.ttf */; };
+		1D8C78B3355448768E4E3003 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C715955F062A43B5A1FAA7C7 /* AntDesign.ttf */; };
+		AE6CAA25F6E6469A948025B2 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FCD5D91C9F44B48C16CD87 /* Foundation.ttf */; };
+		70BD5B78F5984ABF9BBD1EC0 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5386E34848641829D97C31A /* Ionicons.ttf */; };
+		80DC45E212FC42339A8D690F /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61C4D54DAA2B47E9AF69E774 /* FontAwesome5_Solid.ttf */; };
+		772BE1C4F19F4EF7BF460D31 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142081405B00447A9074D9C6 /* FontAwesome5_Regular.ttf */; };
+		D919B03C94284A9D8DA42911 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E61305B69374F4984A01947 /* FontAwesome.ttf */; };
+		B8569CEBFDB54B86A5E1AB2B /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1103DCDE2A41F2A6B3CB3D /* Zocial.ttf */; };
+		5C8B4948C1234B1CB7A94913 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AF0A53C78264F36A5571E57 /* EvilIcons.ttf */; };
+		DE8D590763494EE4BAF403A2 /* FontAwesome6_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 402A67CF288F4A8FAB191938 /* FontAwesome6_Solid.ttf */; };
+		CEACE07CD8034A72B2E05FF3 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1595E551A93C4FAE9E70E8A6 /* SimpleLineIcons.ttf */; };
+		2690950AF8CD4A5DB21C3EAE /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0722273806FE43528E612CFF /* FontAwesome6_Brands.ttf */; };
+		7A77684EA41F456EA0A25D58 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCB69ED1083A42CA878EC848 /* MaterialIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +79,60 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AlzheFi/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AlzheFi/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		6D2BC40531ED4012BCE7DCD8 /* Coolvetica-Crammed-Book.otf */ = {isa = PBXFileReference; name = "Coolvetica-Crammed-Book.otf"; path = "../assets/fonts/Coolvetica-Crammed-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9122E85AB004BC6A1F247E0 /* Coolvetica-Compressed-Extra-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Compressed-Extra-Light.otf"; path = "../assets/fonts/Coolvetica-Compressed-Extra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8C556CE6C6744B67ADE6CD95 /* Coolvetica-Ultra-Light-Regular.otf */ = {isa = PBXFileReference; name = "Coolvetica-Ultra-Light-Regular.otf"; path = "../assets/fonts/Coolvetica-Ultra-Light-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0D0247B125B9431C87694AB2 /* Coolvetica-Compressed.otf */ = {isa = PBXFileReference; name = "Coolvetica-Compressed.otf"; path = "../assets/fonts/Coolvetica-Compressed.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		276E1AFE823044CB95D0BBEA /* Coolvetica-Crammed-Bold.otf */ = {isa = PBXFileReference; name = "Coolvetica-Crammed-Bold.otf"; path = "../assets/fonts/Coolvetica-Crammed-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1F5C8D7F35D54B17AF0C6792 /* Coolvetica-Extra-Light-Italic.otf */ = {isa = PBXFileReference; name = "Coolvetica-Extra-Light-Italic.otf"; path = "../assets/fonts/Coolvetica-Extra-Light-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A7F40FAFD65D4C379F6CAAE5 /* Coolvetica-Crammed-Extra-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Crammed-Extra-Light.otf"; path = "../assets/fonts/Coolvetica-Crammed-Extra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		368872EEF56E44D68C29F26F /* Coolvetica-Condensed-Extra-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Condensed-Extra-Light.otf"; path = "../assets/fonts/Coolvetica-Condensed-Extra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BCBFBAE940064B5F8A1B1FBF /* Coolvetica-Heavy-Italic.otf */ = {isa = PBXFileReference; name = "Coolvetica-Heavy-Italic.otf"; path = "../assets/fonts/Coolvetica-Heavy-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FF95F2751EA14C0D837F1786 /* Coolvetica-Crammed-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Crammed-Light.otf"; path = "../assets/fonts/Coolvetica-Crammed-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6B0F47C4F7D14BB4AE81A78F /* Coolvetica-Compressed-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Compressed-Light.otf"; path = "../assets/fonts/Coolvetica-Compressed-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B889CE5A6021494492085D63 /* Coolvetica-Ultra-Light-Italic.otf */ = {isa = PBXFileReference; name = "Coolvetica-Ultra-Light-Italic.otf"; path = "../assets/fonts/Coolvetica-Ultra-Light-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		07DE9CD5E69247C18CC5E2AC /* Coolvetica-Book-Italic.otf */ = {isa = PBXFileReference; name = "Coolvetica-Book-Italic.otf"; path = "../assets/fonts/Coolvetica-Book-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DC4673C8A6564C7B883A9EC0 /* Coolvetica-Light-Italic.otf */ = {isa = PBXFileReference; name = "Coolvetica-Light-Italic.otf"; path = "../assets/fonts/Coolvetica-Light-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2FB28F9D8223411E9AFEAC5F /* Coolvetica-Bold.otf */ = {isa = PBXFileReference; name = "Coolvetica-Bold.otf"; path = "../assets/fonts/Coolvetica-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		35357CFD83DE451A9B6097B3 /* Coolvetica-Compressed-Heavy.otf */ = {isa = PBXFileReference; name = "Coolvetica-Compressed-Heavy.otf"; path = "../assets/fonts/Coolvetica-Compressed-Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BA0D1E0643774E4C96C150A8 /* Coolvetica-Crammed-Heavy.otf */ = {isa = PBXFileReference; name = "Coolvetica-Crammed-Heavy.otf"; path = "../assets/fonts/Coolvetica-Crammed-Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0B8501883F454FFA8318E413 /* Coolvetica-Bold-Italic.otf */ = {isa = PBXFileReference; name = "Coolvetica-Bold-Italic.otf"; path = "../assets/fonts/Coolvetica-Bold-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D2B5A16A788C477BB939B457 /* Coolvetica-Heavy-Regular.otf */ = {isa = PBXFileReference; name = "Coolvetica-Heavy-Regular.otf"; path = "../assets/fonts/Coolvetica-Heavy-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E38D077575E9404FB238AFB0 /* Coolvetica-Condensed-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Condensed-Light.otf"; path = "../assets/fonts/Coolvetica-Condensed-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96EC3B51340F4315A0CB59FE /* Coolvetica-Crammed.otf */ = {isa = PBXFileReference; name = "Coolvetica-Crammed.otf"; path = "../assets/fonts/Coolvetica-Crammed.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		04BF5A5EE6394E41B709797B /* Coolvetica-Crammed-Ultra-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Crammed-Ultra-Light.otf"; path = "../assets/fonts/Coolvetica-Crammed-Ultra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2A780C55464240D38D76005A /* Coolvetica-Condensed-Ultra-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Condensed-Ultra-Light.otf"; path = "../assets/fonts/Coolvetica-Condensed-Ultra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		58A985C4541D454182B062B8 /* Coolvetica-Book-Regular.otf */ = {isa = PBXFileReference; name = "Coolvetica-Book-Regular.otf"; path = "../assets/fonts/Coolvetica-Book-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F903654FACF4423FB88CB69F /* Coolvetica-Condensed-Bold.otf */ = {isa = PBXFileReference; name = "Coolvetica-Condensed-Bold.otf"; path = "../assets/fonts/Coolvetica-Condensed-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		80FE49DCDAB34D878A61CA45 /* Coolvetica-Compressed-Ultra-Light.otf */ = {isa = PBXFileReference; name = "Coolvetica-Compressed-Ultra-Light.otf"; path = "../assets/fonts/Coolvetica-Compressed-Ultra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6B026E494FDA41A3BCCCA8EE /* Coolvetica-Extra-Light-Regular.otf */ = {isa = PBXFileReference; name = "Coolvetica-Extra-Light-Regular.otf"; path = "../assets/fonts/Coolvetica-Extra-Light-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FFF6D1A7012240FC9C2EBAEF /* Coolvetica-Condensed-Book.otf */ = {isa = PBXFileReference; name = "Coolvetica-Condensed-Book.otf"; path = "../assets/fonts/Coolvetica-Condensed-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0596A1DC5677497FB752B37E /* Coolvetica-Regular.otf */ = {isa = PBXFileReference; name = "Coolvetica-Regular.otf"; path = "../assets/fonts/Coolvetica-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8750B4E978954ACB953E3A32 /* Coolvetica-Compressed-Book.otf */ = {isa = PBXFileReference; name = "Coolvetica-Compressed-Book.otf"; path = "../assets/fonts/Coolvetica-Compressed-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		976B6B20081B4D20BDF9E3A8 /* Coolvetica-Condensed.otf */ = {isa = PBXFileReference; name = "Coolvetica-Condensed.otf"; path = "../assets/fonts/Coolvetica-Condensed.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8FABA8B1229D48FA93D807F4 /* Coolvetica-Light-Regular.otf */ = {isa = PBXFileReference; name = "Coolvetica-Light-Regular.otf"; path = "../assets/fonts/Coolvetica-Light-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		71742B65038E4530AD9C45C4 /* Coolvetica-Compressed-Bold.otf */ = {isa = PBXFileReference; name = "Coolvetica-Compressed-Bold.otf"; path = "../assets/fonts/Coolvetica-Compressed-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B86471B473CB489CA0231089 /* Coolvetica-Condensed-Heavy.otf */ = {isa = PBXFileReference; name = "Coolvetica-Condensed-Heavy.otf"; path = "../assets/fonts/Coolvetica-Condensed-Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FC5E03EE96FF4879911BA455 /* Coolvetica-Italic.otf */ = {isa = PBXFileReference; name = "Coolvetica-Italic.otf"; path = "../assets/fonts/Coolvetica-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E24EA3F78ACF48A0A994CB02 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD9D3148EAEA431AA737DB92 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		90DEE6C6B16D4BE587623CE5 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1B5055111FA347AB80BD71B3 /* FontAwesome6_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome6_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		40675A6DF75C486793A539D0 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9333C55ED2D4ADF976726DB /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B1304717572C4BEA92E159EB /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C715955F062A43B5A1FAA7C7 /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		53FCD5D91C9F44B48C16CD87 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B5386E34848641829D97C31A /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		61C4D54DAA2B47E9AF69E774 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		142081405B00447A9074D9C6 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E61305B69374F4984A01947 /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C1103DCDE2A41F2A6B3CB3D /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6AF0A53C78264F36A5571E57 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		402A67CF288F4A8FAB191938 /* FontAwesome6_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome6_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1595E551A93C4FAE9E70E8A6 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0722273806FE43528E612CFF /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome6_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DCB69ED1083A42CA878EC848 /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +183,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				6BA03267641D4B64912511B7 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -97,6 +206,68 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		6BA03267641D4B64912511B7 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				6D2BC40531ED4012BCE7DCD8 /* Coolvetica-Crammed-Book.otf */,
+				F9122E85AB004BC6A1F247E0 /* Coolvetica-Compressed-Extra-Light.otf */,
+				8C556CE6C6744B67ADE6CD95 /* Coolvetica-Ultra-Light-Regular.otf */,
+				0D0247B125B9431C87694AB2 /* Coolvetica-Compressed.otf */,
+				276E1AFE823044CB95D0BBEA /* Coolvetica-Crammed-Bold.otf */,
+				1F5C8D7F35D54B17AF0C6792 /* Coolvetica-Extra-Light-Italic.otf */,
+				A7F40FAFD65D4C379F6CAAE5 /* Coolvetica-Crammed-Extra-Light.otf */,
+				368872EEF56E44D68C29F26F /* Coolvetica-Condensed-Extra-Light.otf */,
+				BCBFBAE940064B5F8A1B1FBF /* Coolvetica-Heavy-Italic.otf */,
+				FF95F2751EA14C0D837F1786 /* Coolvetica-Crammed-Light.otf */,
+				6B0F47C4F7D14BB4AE81A78F /* Coolvetica-Compressed-Light.otf */,
+				B889CE5A6021494492085D63 /* Coolvetica-Ultra-Light-Italic.otf */,
+				07DE9CD5E69247C18CC5E2AC /* Coolvetica-Book-Italic.otf */,
+				DC4673C8A6564C7B883A9EC0 /* Coolvetica-Light-Italic.otf */,
+				2FB28F9D8223411E9AFEAC5F /* Coolvetica-Bold.otf */,
+				35357CFD83DE451A9B6097B3 /* Coolvetica-Compressed-Heavy.otf */,
+				BA0D1E0643774E4C96C150A8 /* Coolvetica-Crammed-Heavy.otf */,
+				0B8501883F454FFA8318E413 /* Coolvetica-Bold-Italic.otf */,
+				D2B5A16A788C477BB939B457 /* Coolvetica-Heavy-Regular.otf */,
+				E38D077575E9404FB238AFB0 /* Coolvetica-Condensed-Light.otf */,
+				96EC3B51340F4315A0CB59FE /* Coolvetica-Crammed.otf */,
+				04BF5A5EE6394E41B709797B /* Coolvetica-Crammed-Ultra-Light.otf */,
+				2A780C55464240D38D76005A /* Coolvetica-Condensed-Ultra-Light.otf */,
+				58A985C4541D454182B062B8 /* Coolvetica-Book-Regular.otf */,
+				F903654FACF4423FB88CB69F /* Coolvetica-Condensed-Bold.otf */,
+				80FE49DCDAB34D878A61CA45 /* Coolvetica-Compressed-Ultra-Light.otf */,
+				6B026E494FDA41A3BCCCA8EE /* Coolvetica-Extra-Light-Regular.otf */,
+				FFF6D1A7012240FC9C2EBAEF /* Coolvetica-Condensed-Book.otf */,
+				0596A1DC5677497FB752B37E /* Coolvetica-Regular.otf */,
+				8750B4E978954ACB953E3A32 /* Coolvetica-Compressed-Book.otf */,
+				976B6B20081B4D20BDF9E3A8 /* Coolvetica-Condensed.otf */,
+				8FABA8B1229D48FA93D807F4 /* Coolvetica-Light-Regular.otf */,
+				71742B65038E4530AD9C45C4 /* Coolvetica-Compressed-Bold.otf */,
+				B86471B473CB489CA0231089 /* Coolvetica-Condensed-Heavy.otf */,
+				FC5E03EE96FF4879911BA455 /* Coolvetica-Italic.otf */,
+				E24EA3F78ACF48A0A994CB02 /* Fontisto.ttf */,
+				AD9D3148EAEA431AA737DB92 /* Octicons.ttf */,
+				90DEE6C6B16D4BE587623CE5 /* Feather.ttf */,
+				1B5055111FA347AB80BD71B3 /* FontAwesome6_Regular.ttf */,
+				40675A6DF75C486793A539D0 /* Entypo.ttf */,
+				F9333C55ED2D4ADF976726DB /* FontAwesome5_Brands.ttf */,
+				B1304717572C4BEA92E159EB /* MaterialCommunityIcons.ttf */,
+				C715955F062A43B5A1FAA7C7 /* AntDesign.ttf */,
+				53FCD5D91C9F44B48C16CD87 /* Foundation.ttf */,
+				B5386E34848641829D97C31A /* Ionicons.ttf */,
+				61C4D54DAA2B47E9AF69E774 /* FontAwesome5_Solid.ttf */,
+				142081405B00447A9074D9C6 /* FontAwesome5_Regular.ttf */,
+				3E61305B69374F4984A01947 /* FontAwesome.ttf */,
+				3C1103DCDE2A41F2A6B3CB3D /* Zocial.ttf */,
+				6AF0A53C78264F36A5571E57 /* EvilIcons.ttf */,
+				402A67CF288F4A8FAB191938 /* FontAwesome6_Solid.ttf */,
+				1595E551A93C4FAE9E70E8A6 /* SimpleLineIcons.ttf */,
+				0722273806FE43528E612CFF /* FontAwesome6_Brands.ttf */,
+				DCB69ED1083A42CA878EC848 /* MaterialIcons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -161,6 +332,60 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				46ECA91A0F3699BD7318A05A /* PrivacyInfo.xcprivacy in Resources */,
+				6620D8A2FF8E4D239F4D6CC2 /* Coolvetica-Crammed-Book.otf in Resources */,
+				E9BF9708776F46F2B72CCFE7 /* Coolvetica-Compressed-Extra-Light.otf in Resources */,
+				519BFAA7A1104F4886C56288 /* Coolvetica-Ultra-Light-Regular.otf in Resources */,
+				FE3FDB5511574E40B5BEEF8C /* Coolvetica-Compressed.otf in Resources */,
+				B35995DBE2684AA8946500AF /* Coolvetica-Crammed-Bold.otf in Resources */,
+				19C0E6AB015143E99C083027 /* Coolvetica-Extra-Light-Italic.otf in Resources */,
+				89BCB3DBBB3F4F49B0DCDF59 /* Coolvetica-Crammed-Extra-Light.otf in Resources */,
+				90D43E5D443948DE87819520 /* Coolvetica-Condensed-Extra-Light.otf in Resources */,
+				4F5B72FFDA884B8EBC5A1553 /* Coolvetica-Heavy-Italic.otf in Resources */,
+				65B968E8C6734E9E80346C46 /* Coolvetica-Crammed-Light.otf in Resources */,
+				83A2F741984C4D4493644D9D /* Coolvetica-Compressed-Light.otf in Resources */,
+				1A0C9E809C33439A97934B25 /* Coolvetica-Ultra-Light-Italic.otf in Resources */,
+				65D5CF287D054CC4946BFE01 /* Coolvetica-Book-Italic.otf in Resources */,
+				83F771DB062E4770A9ED040A /* Coolvetica-Light-Italic.otf in Resources */,
+				B3E1DF3B45984438A72D97D4 /* Coolvetica-Bold.otf in Resources */,
+				FDED9021812D4741966F4261 /* Coolvetica-Compressed-Heavy.otf in Resources */,
+				8FD392E1ED524337A3A9D343 /* Coolvetica-Crammed-Heavy.otf in Resources */,
+				7DCFEBAAA09943D29D2EF8AF /* Coolvetica-Bold-Italic.otf in Resources */,
+				4AD6291AD7654F6E9F2164DA /* Coolvetica-Heavy-Regular.otf in Resources */,
+				CEAC579D9E124B6DB0E958E7 /* Coolvetica-Condensed-Light.otf in Resources */,
+				BBF9542EF44946DF9AE2756D /* Coolvetica-Crammed.otf in Resources */,
+				B8E23EC21F0B4AB8AA6B2262 /* Coolvetica-Crammed-Ultra-Light.otf in Resources */,
+				4B983B5D22F84AB692A089B0 /* Coolvetica-Condensed-Ultra-Light.otf in Resources */,
+				E7048C3AC08449679F1098D0 /* Coolvetica-Book-Regular.otf in Resources */,
+				F0BAA7270EA1495D8B09CD44 /* Coolvetica-Condensed-Bold.otf in Resources */,
+				31DC8DC7134F422A899F95A7 /* Coolvetica-Compressed-Ultra-Light.otf in Resources */,
+				6C587348DCF7478D90912C36 /* Coolvetica-Extra-Light-Regular.otf in Resources */,
+				64897F609883453BB916D160 /* Coolvetica-Condensed-Book.otf in Resources */,
+				7AF974AF046C47EB914BE0B0 /* Coolvetica-Regular.otf in Resources */,
+				E97CA61708B1478BA1ACB8BA /* Coolvetica-Compressed-Book.otf in Resources */,
+				95CAC6EE3716431FBB43D12B /* Coolvetica-Condensed.otf in Resources */,
+				943137E6532244CBAB1135A7 /* Coolvetica-Light-Regular.otf in Resources */,
+				CFDE71315EDB46D8A165EC1B /* Coolvetica-Compressed-Bold.otf in Resources */,
+				E95B28E308E7476CB6EAA236 /* Coolvetica-Condensed-Heavy.otf in Resources */,
+				B3E2C7E797374FDEA2A63E5C /* Coolvetica-Italic.otf in Resources */,
+				FEE22E5A8B284EF6ABB0801F /* Fontisto.ttf in Resources */,
+				2C9B17EE42814CBCAB0B361F /* Octicons.ttf in Resources */,
+				04DC1CBC4AA14CB385348687 /* Feather.ttf in Resources */,
+				74E2E5C858DF4E9982F5099F /* FontAwesome6_Regular.ttf in Resources */,
+				039948B3A04146B9AA302DB0 /* Entypo.ttf in Resources */,
+				13BB5C2AB49C45FF91C8C2D1 /* FontAwesome5_Brands.ttf in Resources */,
+				5395BCF1660B44D1904D337D /* MaterialCommunityIcons.ttf in Resources */,
+				1D8C78B3355448768E4E3003 /* AntDesign.ttf in Resources */,
+				AE6CAA25F6E6469A948025B2 /* Foundation.ttf in Resources */,
+				70BD5B78F5984ABF9BBD1EC0 /* Ionicons.ttf in Resources */,
+				80DC45E212FC42339A8D690F /* FontAwesome5_Solid.ttf in Resources */,
+				772BE1C4F19F4EF7BF460D31 /* FontAwesome5_Regular.ttf in Resources */,
+				D919B03C94284A9D8DA42911 /* FontAwesome.ttf in Resources */,
+				B8569CEBFDB54B86A5E1AB2B /* Zocial.ttf in Resources */,
+				5C8B4948C1234B1CB7A94913 /* EvilIcons.ttf in Resources */,
+				DE8D590763494EE4BAF403A2 /* FontAwesome6_Solid.ttf in Resources */,
+				CEACE07CD8034A72B2E05FF3 /* SimpleLineIcons.ttf in Resources */,
+				2690950AF8CD4A5DB21C3EAE /* FontAwesome6_Brands.ttf in Resources */,
+				7A77684EA41F456EA0A25D58 /* MaterialIcons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
