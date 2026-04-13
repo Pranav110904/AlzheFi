@@ -141,7 +141,7 @@ export default function ChatScreen() {
       }
       await Speech.stop();
       setSpeakingId(id);
-      await Speech.speak(text, { voice: 'en-us-x-iom-local', rate: 0.9, pitch: 0.9 });
+      await Speech.speak(text, { voice: 'en-us-x-tpd-network', rate: 0.9, pitch: 0.9 });
       setSpeakingId(null);
     } catch (error) {
       console.log('Speech error:', error);

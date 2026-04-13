@@ -142,6 +142,63 @@ async deletePatientEvent(eventId: string) {
 }
 
 
+
+// ---------- MEMORY (CAREGIVER) ----------
+
+// Add Photo Memory
+async addPhotoMemory(
+  patientId: string,
+  data: {
+    title?: string;
+    year?: string;
+    category?: string;
+    caption?: string;
+    imageUrl: string;
+  }
+): Promise<any> {
+  const res = await this.api.post(
+    `/caregiver/patient/${patientId}/memory/photo`,
+    data
+  );
+  return res.data;
+}
+
+// Add Story Memory
+async addStoryMemory(
+  patientId: string,
+  data: {
+    title?: string;
+    year?: string;
+    description: string;
+    mood?: string;
+  }
+): Promise<any> {
+  const res = await this.api.post(
+    `/caregiver/patient/${patientId}/memory/story`,
+    data
+  );
+  return res.data;
+}
+
+// Add Place Memory
+async addPlaceMemory(
+  patientId: string,
+  data: {
+    placeName: string;
+    address?: string;
+    category?: string;
+    description?: string;
+    photoUrl?: string;
+  }
+): Promise<any> {
+  const res = await this.api.post(
+    `/caregiver/patient/${patientId}/memory/place`,
+    data
+  );
+  return res.data;
+}
+
+
   // ---------- CONVERSATION ----------
   async queryConversation(query: string): Promise<{ answer: string }> {
     const res = await this.api.post('/conversation/query', { query });

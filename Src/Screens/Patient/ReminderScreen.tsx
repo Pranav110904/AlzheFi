@@ -593,7 +593,7 @@ const speakReminder = async (title: string, description?: string) => {
     await Speech.stop(); // stop previous speech
 
     await Speech.speak(message, {
-      voice: 'en-us-x-iom-local', // same as chat screen
+      voice: 'en-us-x-tpd-network', // same as chat screen
       rate: 0.9,
       pitch: 0.9,
     });

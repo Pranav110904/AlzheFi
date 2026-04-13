@@ -546,27 +546,131 @@ export default function MemoriesScreen() {
     })();
   }, []);
 
+
+
+ 
+
+
   // ── Save handler ──
-  const handleSave = async (
-    tab: TabType,
-    data: PhotoPayload | StoryPayload | PlacePayload
-  ) => {
-    if (!selectedPatient) return;
-    const patientId = selectedPatient._id ?? selectedPatient.id;
-    try {
-      if (tab === 'photo') {
-        await apiService.createPatientMemoryPhoto(patientId, data as PhotoPayload);
-      } else if (tab === 'story') {
-        await apiService.createPatientMemoryStory(patientId, data as StoryPayload);
-      } else {
-        await apiService.createPatientMemoryPlace(patientId, data as PlacePayload);
+const handleSave = async (
+  tab: TabType,
+  data: PhotoPayload | StoryPayload | PlacePayload
+) => {
+  if (!selectedPatient) return;
+
+  const patientId = selectedPatient._id ?? selectedPatient.id;
+
+  try {
+    if (tab === 'photo') {
+      const photoData = data as PhotoPayload;
+
+      if (!photoData.images.length) {
+        Alert.alert("Error", "Please select an image");
+        return;
       }
-    } catch (e) {
-      console.log('Save memory error:', e);
-      Alert.alert('Error', 'Could not save memory. Please try again.');
-      throw e;
+
+      // ✅ STEP 1: take first image
+      const file = photoData.images[0];
+
+      // ✅ STEP 2: get upload URL
+      const { signedUrl, publicUrl } = await apiService.api.post(
+        "/media/upload-url",
+        {
+          fileName: file.name,
+          mimeType: file.type,
+        }
+      ).then(res => res.data);
+
+      // ✅ STEP 3: upload to supabase
+      await fetch(signedUrl, {
+        method: "PUT",
+        headers: {
+          "Content-Type": file.type,
+        },
+        body: {
+          uri: file.uri,
+          type: file.type,
+          name: file.name,
+        } as any,
+      });
+
+      // ✅ STEP 4: send to backend
+      await apiService.addPhotoMemory(patientId, {
+        title: photoData.title,
+        year: photoData.year,
+        category: photoData.category,
+        caption: photoData.caption,
+        imageUrl: publicUrl, // 🔥 THIS IS THE FIX
+      });
+
+    } 
+    else if (tab === 'story') {
+      const storyData = data as StoryPayload;
+
+       const moodMap: Record<string, string> = {
+          "home-heart": "Home",
+          "heart": "Love",
+          "briefcase": "Work",
+          "airplane": "Travel",
+          "party-popper": "Celebrate",
+          "tree": "Nature",
+          "book-open": "Learn",
+          "trophy": "Achieve",
+        };
+
+      await apiService.addStoryMemory(patientId, {
+        title: storyData.title,
+        year: storyData.year,
+        description: storyData.content, // 🔥 FIX NAME
+        mood: moodMap[storyData.icon] || "Home",          // 🔥 FIX NAME
+      });
+
+    } 
+    else {
+      const placeData = data as PlacePayload;
+
+      let photoUrl = "";
+
+      if (placeData.images.length > 0) {
+        const file = placeData.images[0];
+
+        const { signedUrl, publicUrl } = await apiService.api.post(
+          "/media/upload-url",
+          {
+            fileName: file.name,
+            mimeType: file.type,
+          }
+        ).then(res => res.data);
+
+        await fetch(signedUrl, {
+          method: "PUT",
+          headers: {
+            "Content-Type": file.type,
+          },
+          body: {
+            uri: file.uri,
+            type: file.type,
+            name: file.name,
+          } as any,
+        });
+
+        photoUrl = publicUrl;
+      }
+
+      await apiService.addPlaceMemory(patientId, {
+        placeName: placeData.name,   // 🔥 FIX NAME
+        address: placeData.address,
+        category: placeData.category,
+        description: placeData.description,
+        photoUrl,
+      });
     }
-  };
+
+  } catch (e: any) {
+    console.log("ERROR FULL:", e?.response?.data || e);
+    Alert.alert("Error", e?.response?.data?.error || "Something went wrong");
+  }
+};
 
   // ── Loading state ──
   if (loadingPatients) {
