@@ -505,18 +505,7 @@ const removeAttachment = (id: string) => {
 
           {/* ── Input Bar ── */}
           <View style={styles.inputBar}>
-            {/* Attach Button */}
-            <TouchableOpacity
-              style={styles.attachBtn}
-              onPress={() => setShowAttachMenu(prev => !prev)}
-              activeOpacity={0.8}
-            >
-              <Ionicons
-                name={showAttachMenu ? 'close' : 'add'}
-                size={22}
-                color={DARK}
-              />
-            </TouchableOpacity>
+           
 
             <TextInput
               style={styles.textInput}
@@ -678,18 +667,7 @@ const removeAttachment = (id: string) => {
 
         {/* ── Input Bar ── */}
         <View style={styles.inputBar}>
-          {/* Attach Button */}
-          <TouchableOpacity
-            style={styles.attachBtn}
-            onPress={() => setShowAttachMenu(prev => !prev)}
-            activeOpacity={0.8}
-          >
-            <Ionicons
-              name={showAttachMenu ? 'close' : 'add'}
-              size={22}
-              color={DARK}
-            />
-          </TouchableOpacity>
+          
 
           <TextInput
             style={styles.textInput}

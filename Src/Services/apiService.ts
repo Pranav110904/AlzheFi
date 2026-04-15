@@ -5,7 +5,8 @@ import * as Types from '../Types';
 
 const API_BASE_URL = Platform.select({
   ios: 'http://localhost:3005/api',
-  android: 'http://10.0.2.2:3005/api',
+  //android: 'http://10.0.2.2:3005/api',
+   android: 'https://curalz.onrender.com/api',
   default: 'http://localhost:3005/api',
 });
 
@@ -199,6 +200,39 @@ async addPlaceMemory(
 }
 
 
+
+
+// ---------- PATIENT ----------
+
+// 📸 Get memories by type (photo, place, story, chat)
+async getMemoriesByType(
+  type: 'photo' | 'place' | 'story' | 'chat',
+  limit = 20,
+  skip = 0
+): Promise<any[]> {
+  const res = await this.api.get(`/patient/memories/${type}`, {
+    params: { limit, skip },
+  });
+  return res.data.memories;
+}
+
+
+// 👨‍👩‍👧 Get contacts
+async getContacts(): Promise<any[]> {
+  const res = await this.api.get(`/patient/contacts`);
+  return res.data.contacts;
+}
+
+
+// ➕ Create contact
+async createContact(data: {
+  name: string;
+  relationship: string;
+  phoneNumber: string;
+}): Promise<any> {
+  const res = await this.api.post(`/patient/contacts`, data);
+  return res.data;
+}
   // ---------- CONVERSATION ----------
   async queryConversation(query: string): Promise<{ answer: string }> {
     const res = await this.api.post('/conversation/query', { query });

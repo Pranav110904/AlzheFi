@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -7,9 +7,11 @@ import {
   TouchableOpacity,
   Dimensions,
   Image,
+  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { apiService } from '../../Services/apiService'; // adjust if needed
 
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = (width - 60) / 2;
@@ -21,101 +23,98 @@ const MUTED  = '#9CA3AF';
 const BORDER = '#E5E0D8';
 const WHITE  = '#FFFFFF';
 
-// ─── Types ────────────────────────────────────────────────────────────────────
 type TabType = 'photos' | 'stories' | 'places';
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
-const photos = [
-  { id: '1', title: 'Wedding Day',       year: '1985', category: 'Family',      image: 'https://picsum.photos/300/300?random=1' },
-  { id: '2', title: 'Trip to Manali',    year: '1992', category: 'Travel',      image: 'https://picsum.photos/300/300?random=2' },
-  { id: '3', title: 'First Car',         year: '1988', category: 'Achievement', image: 'https://picsum.photos/300/300?random=3' },
-  { id: '4', title: 'With Grandchildren',year: '2016', category: 'Family',      image: 'https://picsum.photos/300/300?random=4' },
-];
+interface PhotoMemory {
+  _id: string;
+  title?: string;
+  year?: string;
+  category?: string;
+  imageUrl?: string;
+}
 
-const stories = [
-  {
-    id: '1',
-    title: 'Our First Home',
-    year: '1980',
-    icon: 'home-heart',
-    color: '#86EFAC',
-    content: 'We moved into our first house on Maple Street in the summer of 1980. It had a small garden and a wooden swing in the backyard. That house was full of laughter and memories.',
-  },
-  {
-    id: '2',
-    title: 'Meeting Your Wife',
-    year: '1978',
-    icon: 'heart',
-    color: '#F9A8D4',
-    content: 'It was a sunny afternoon in the park when I first saw her. She was reading a book near the fountain. That moment changed my life forever.',
-  },
-  {
-    id: '3',
-    title: 'Career Journey',
-    year: '1982',
-    icon: 'briefcase',
-    color: '#93C5FD',
-    content: 'You started as a junior engineer and worked your way up to become the head of your department. Your dedication inspired many.',
-  },
-];
+interface StoryMemory {
+  _id: string;
+  title?: string;
+  year?: string;
+  description?: string;
+  mood?: string;
+}
 
-const places = [
-  {
-    id: '1',
-    name: 'Your Home',
-    address: '123 Maple Street',
-    description: 'This is where you have lived for more than 40 years. Many birthdays, festivals, and family dinners happened here.',
-    images: ['https://picsum.photos/200?random=11', 'https://picsum.photos/200?random=12', 'https://picsum.photos/200?random=13'],
-  },
-  {
-    id: '2',
-    name: 'Central Park',
-    address: 'Downtown Area',
-    description: 'You used to go here every morning for peaceful walks. You often sat near the fountain and fed the birds.',
-    images: ['https://picsum.photos/200?random=14', 'https://picsum.photos/200?random=15', 'https://picsum.photos/200?random=16'],
-  },
-  {
-    id: '3',
-    name: "Sarah's Cafe",
-    address: '456 Oak Avenue',
-    description: 'This is where you first met Sarah. You both used to have coffee by the window every Sunday.',
-    images: ['https://picsum.photos/200?random=17', 'https://picsum.photos/200?random=18', 'https://picsum.photos/200?random=19'],
-  },
-  {
-    id: '4',
-    name: 'Community Temple',
-    address: 'Lakeview Road',
-    description: 'You visited this temple every festival. It holds spiritual and peaceful memories for you.',
-    images: ['https://picsum.photos/200?random=20', 'https://picsum.photos/200?random=21', 'https://picsum.photos/200?random=22'],
-  },
-  {
-    id: '5',
-    name: 'Old Office Building',
-    address: 'Industrial Area Sector 4',
-    description: 'You worked here for more than 25 years. This is where your career journey grew and flourished.',
-    images: ['https://picsum.photos/200?random=23', 'https://picsum.photos/200?random=24', 'https://picsum.photos/200?random=25'],
-  },
-  {
-    id: '6',
-    name: 'Manali Hills',
-    address: 'Himachal Pradesh',
-    description: 'You visited this beautiful hill station with your family during summer vacations. The mountain views were unforgettable.',
-    images: ['https://picsum.photos/200?random=26', 'https://picsum.photos/200?random=27', 'https://picsum.photos/200?random=28'],
-  },
-];
+interface PlaceMemory {
+  _id: string;
+  placeName: string;
+  address?: string;
+  description?: string;
+  photoUrl?: string;
+}
 
-// ─── Tab config ───────────────────────────────────────────────────────────────
 const TABS: { key: TabType; label: string; icon: string }[] = [
   { key: 'photos',  label: 'PHOTOS',  icon: 'image-multiple' },
   { key: 'stories', label: 'STORIES', icon: 'book-open-variant' },
   { key: 'places',  label: 'PLACES',  icon: 'map-marker-multiple' },
 ];
 
-// ─── Screen ───────────────────────────────────────────────────────────────────
+const STORY_ICONS  = ['home-heart', 'heart', 'briefcase', 'star', 'music', 'book'];
+const STORY_COLORS = ['#86EFAC', '#F9A8D4', '#93C5FD', '#FDE68A', '#C4B5FD', '#6EE7B7'];
+
 export default function ProfileScreen() {
-  const [activeTab, setActiveTab]       = useState<TabType>('photos');
+  const [activeTab, setActiveTab]         = useState<TabType>('photos');
   const [expandedStory, setExpandedStory] = useState<string | null>(null);
   const [expandedPlace, setExpandedPlace] = useState<string | null>(null);
+
+  const [photos,  setPhotos]  = useState<PhotoMemory[]>([]);
+  const [stories, setStories] = useState<StoryMemory[]>([]);
+  const [places,  setPlaces]  = useState<PlaceMemory[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error,   setError]   = useState<string | null>(null);
+
+
+  const MOOD_TO_ICON: Record<string, string> = {
+  Home: 'home-heart',
+  Love: 'heart',
+  Work: 'briefcase',
+  Travel: 'airplane',
+  Celebrate: 'party-popper',
+  Nature: 'tree',
+  Learn: 'book-open',
+  Achieve: 'trophy',
+};
+
+  useEffect(() => {
+    fetchTab(activeTab);
+  }, [activeTab]);
+
+const fetchTab = async (tab: TabType) => {
+  setLoading(true);
+  setError(null);
+
+  try {
+    if (tab === 'photos') {
+      const data = await apiService.getMemoriesByType('photo');
+
+      setPhotos(data ?? []);
+    } 
+    else if (tab === 'stories') {
+      const data = await apiService.getMemoriesByType('story');
+     
+      setStories(data ?? []);
+    } 
+    else if (tab === 'places') {
+
+      const data = await apiService.getMemoriesByType('place');
+      console.log(data)
+      setPlaces(data ?? []);
+    }
+  } catch (err: any) {
+    console.log('FETCH ERROR:', err?.response?.status, err?.response?.data);
+    setError('Failed to load. Tap to retry.');
+  } finally {
+    setLoading(false);
+  }
+};
+
+  const totalCount = photos.length + stories.length + places.length;
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -126,11 +125,9 @@ export default function ProfileScreen() {
           <Text style={styles.headerEyebrow}>Your Life Story</Text>
           <Text style={styles.headerTitle}>Memories</Text>
         </View>
-
-        {/* Count badge */}
         <View style={styles.countBadge}>
           <Icon name="clock-outline" size={13} color={DARK} />
-          <Text style={styles.countBadgeText}>{photos.length + stories.length + places.length} items</Text>
+          <Text style={styles.countBadgeText}>{totalCount} items</Text>
         </View>
       </View>
 
@@ -151,165 +148,233 @@ export default function ProfileScreen() {
               onPress={() => setActiveTab(key)}
               activeOpacity={0.85}
             >
-              <Icon
-                name={icon}
-                size={16}
-                color={isActive ? DARK : MUTED}
-                style={{ marginBottom: 3 }}
-              />
-              <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>
-                {label}
-              </Text>
+              <Icon name={icon} size={16} color={isActive ? DARK : MUTED} style={{ marginBottom: 3 }} />
+              <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>{label}</Text>
             </TouchableOpacity>
           );
         })}
       </View>
 
-      <ScrollView
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+
+        {/* ── Loading ── */}
+        {loading && (
+          <View style={styles.centerState}>
+            <ActivityIndicator size="large" color={DARK} />
+            <Text style={styles.centerStateText}>Loading memories...</Text>
+          </View>
+        )}
+
+        {/* ── Error ── */}
+        {!loading && error && (
+          <View style={styles.centerState}>
+            <Icon name="alert-circle-outline" size={36} color={MUTED} />
+            <Text style={styles.centerStateText}>{error}</Text>
+            <TouchableOpacity style={styles.retryBtn} onPress={() => fetchTab(activeTab)}>
+              <Text style={styles.retryBtnText}>Retry</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
+        {/* ── Empty ── */}
+        {!loading && !error && activeTab === 'photos'  && photos.length  === 0 && (
+          <View style={styles.centerState}>
+            <Icon name="image-off-outline" size={40} color={MUTED} />
+            <Text style={styles.centerStateText}>No photo memories yet</Text>
+          </View>
+        )}
+        {!loading && !error && activeTab === 'stories' && stories.length === 0 && (
+          <View style={styles.centerState}>
+            <Icon name="book-off-outline" size={40} color={MUTED} />
+            <Text style={styles.centerStateText}>No stories yet</Text>
+          </View>
+        )}
+        {!loading && !error && activeTab === 'places'  && places.length  === 0 && (
+          <View style={styles.centerState}>
+            <Icon name="map-marker-off-outline" size={40} color={MUTED} />
+            <Text style={styles.centerStateText}>No places yet</Text>
+          </View>
+        )}
 
         {/* ── PHOTOS ── */}
-        {activeTab === 'photos' && (
+        {!loading && !error && activeTab === 'photos' && photos.length > 0 && (
           <>
             <Text style={styles.sectionLabel}>Cherished Moments</Text>
             <View style={styles.photosGrid}>
               {photos.map((photo) => (
-                <TouchableOpacity key={photo.id} style={styles.photoCard} activeOpacity={0.9}>
-                  <Image source={{ uri: photo.image }} style={styles.photoImage} />
+                  <TouchableOpacity key={photo._id} style={styles.photoCard} activeOpacity={0.9}>
 
-                  {/* Category pill */}
-                  <View style={styles.categoryPill}>
-                    <Text style={styles.categoryPillText}>{photo.category}</Text>
-                  </View>
+                    {photo.data?.imageUrl ? (
+                      <Image
+                        source={{ uri: photo.data.imageUrl }}
+                        style={styles.photoImage}
+                      />
+                    ) : (
+                      <View style={[styles.photoImage, styles.noImage]}>
+                        <Icon name="image-off-outline" size={24} color={MUTED} />
+                      </View>
+                    )}
 
-                  <View style={styles.photoInfo}>
-                    <Text style={styles.cardTitle}>{photo.title}</Text>
-                    <View style={styles.yearRow}>
-                      <Icon name="calendar" size={11} color={MUTED} />
-                      <Text style={styles.cardMeta}>{photo.year}</Text>
+                    <View style={styles.categoryPill}>
+                      <Text style={styles.categoryPillText}>
+                        {photo.data?.category || 'Memory'}
+                      </Text>
                     </View>
-                  </View>
-                </TouchableOpacity>
-              ))}
+
+                    <View style={styles.photoInfo}>
+                      <Text style={styles.cardTitle}>
+                        {photo.title || 'Untitled'}
+                      </Text>
+
+                      <View style={styles.yearRow}>
+                        <Icon name="calendar" size={11} color={MUTED} />
+                        <Text style={styles.cardMeta}>
+                          {photo.year || '—'}
+                        </Text>
+                      </View>
+                    </View>
+
+                  </TouchableOpacity>
+                ))}
             </View>
           </>
         )}
 
         {/* ── STORIES ── */}
-        {activeTab === 'stories' && (
+        {!loading && !error && activeTab === 'stories' && stories.length > 0 && (
           <>
             <Text style={styles.sectionLabel}>Life Chapters</Text>
             <View style={{ gap: 14 }}>
-              {stories.map((story) => {
-                const isExpanded = expandedStory === story.id;
-                return (
-                  <TouchableOpacity
-                    key={story.id}
-                    style={styles.storyCard}
-                    activeOpacity={0.85}
-                    onPress={() => setExpandedStory(isExpanded ? null : story.id)}
-                  >
-                    <View style={styles.storyTopRow}>
-                      {/* Icon avatar */}
-                      <View style={[styles.storyAvatar, { backgroundColor: story.color + '33' }]}>
-                        <Icon name={story.icon} size={22} color={DARK} />
-                      </View>
+              {stories.map((story, index) => {
+  const isExpanded = expandedStory === story._id;
+  const color = STORY_COLORS[index % STORY_COLORS.length];
+  const icon  = STORY_ICONS[index % STORY_ICONS.length];
 
-                      <View style={{ flex: 1 }}>
-                        <Text style={styles.cardTitle}>{story.title}</Text>
-                        <View style={styles.yearRow}>
-                          <Icon name="calendar" size={11} color={MUTED} />
-                          <Text style={styles.cardMeta}>{story.year}</Text>
-                        </View>
-                      </View>
+  return (
+    <TouchableOpacity
+      key={story._id}
+      style={styles.storyCard}
+      activeOpacity={0.85}
+      onPress={() => setExpandedStory(isExpanded ? null : story._id)}
+    >
+      <View style={styles.storyTopRow}>
+        <View style={[styles.storyAvatar, { backgroundColor: color + '33' }]}>
+          <Icon
+            name={MOOD_TO_ICON[story.data?.mood] || 'book-open'}
+            size={22}
+            color={DARK}
+          />
+        </View>
 
-                      <Icon
-                        name={isExpanded ? 'chevron-up' : 'chevron-down'}
-                        size={20}
-                        color={MUTED}
-                      />
-                    </View>
+        <View style={{ flex: 1 }}>
+          <Text style={styles.cardTitle}>
+            {story.title || 'Untitled'}
+          </Text>
 
-                    {isExpanded && (
-                      <View style={styles.storyBody}>
-                        <Text style={styles.storyContent}>{story.content}</Text>
-                      </View>
-                    )}
-                  </TouchableOpacity>
-                );
-              })}
+          {/* 🔥 Mood */}
+          {story.data?.mood && (
+            <Text style={{ fontSize: 12, color: MUTED }}>
+              {story.data.mood}
+            </Text>
+          )}
+
+          <View style={styles.yearRow}>
+            <Icon name="calendar" size={11} color={MUTED} />
+            <Text style={styles.cardMeta}>
+              {story.year || '—'}
+            </Text>
+          </View>
+        </View>
+
+        <Icon name={isExpanded ? 'chevron-up' : 'chevron-down'} size={20} color={MUTED} />
+      </View>
+
+      {isExpanded && (
+        <View style={styles.storyBody}>
+          <Text style={styles.storyContent}>
+            {story.data?.description || 'No content available.'}
+          </Text>
+        </View>
+      )}
+    </TouchableOpacity>
+  );
+})}
             </View>
           </>
         )}
 
         {/* ── PLACES ── */}
-        {activeTab === 'places' && (
+        {!loading && !error && activeTab === 'places' && places.length > 0 && (
           <>
             <Text style={styles.sectionLabel}>Meaningful Places</Text>
             <View style={{ gap: 14 }}>
               {places.map((place) => {
-                const isExpanded = expandedPlace === place.id;
-                return (
-                  <TouchableOpacity
-                    key={place.id}
-                    style={styles.placeCard}
-                    activeOpacity={0.9}
-                    onPress={() => setExpandedPlace(isExpanded ? null : place.id)}
-                  >
-                    <View style={styles.placeTopRow}>
-                      {/* Pin avatar */}
-                      <View style={styles.placeAvatar}>
-                        <Icon name="map-marker" size={22} color={DARK} />
-                      </View>
+  const isExpanded = expandedPlace === place._id;
 
-                      <View style={{ flex: 1, marginLeft: 12 }}>
-                        <Text style={styles.cardTitle}>{place.name}</Text>
-                        <View style={styles.yearRow}>
-                          <Icon name="map-outline" size={11} color={MUTED} />
-                          <Text style={styles.cardMeta}>{place.address}</Text>
-                        </View>
-                      </View>
+  return (
+    <TouchableOpacity
+      key={place._id}
+      style={styles.placeCard}
+      activeOpacity={0.9}
+      onPress={() => setExpandedPlace(isExpanded ? null : place._id)}
+    >
+      <View style={styles.placeTopRow}>
+        <View style={styles.placeAvatar}>
+          <Icon name="map-marker" size={22} color={DARK} />
+        </View>
 
-                      <Icon
-                        name={isExpanded ? 'chevron-up' : 'chevron-down'}
-                        size={20}
-                        color={MUTED}
-                      />
-                    </View>
+        <View style={{ flex: 1, marginLeft: 12 }}>
+          <Text style={styles.cardTitle}>
+            {place.data?.placeName || 'Unnamed Place'}
+          </Text>
 
-                    {isExpanded && (
-                      <View style={styles.placeDropdown}>
-                        <Text style={styles.placeDescription}>{place.description}</Text>
+          <View style={styles.yearRow}>
+            <Icon name="map-outline" size={11} color={MUTED} />
+            <Text style={styles.cardMeta}>
+              {place.data?.address || '—'}
+            </Text>
+          </View>
+        </View>
 
-                        <View style={styles.placePhotosRow}>
-                          {place.images.map((img, index) => (
-                            <Image
-                              key={index}
-                              source={{ uri: img }}
-                              style={styles.placeImage}
-                            />
-                          ))}
-                        </View>
-                      </View>
-                    )}
-                  </TouchableOpacity>
-                );
-              })}
+        <Icon
+          name={isExpanded ? 'chevron-up' : 'chevron-down'}
+          size={20}
+          color={MUTED}
+        />
+      </View>
+
+      {isExpanded && (
+        <View style={styles.placeDropdown}>
+          <Text style={styles.placeDescription}>
+            {place.data?.description || 'No description available.'}
+          </Text>
+
+          {place.data?.photoUrl && (
+            <View style={styles.placePhotosRow}>
+              <Image
+                source={{ uri: place.data.photoUrl }}
+                style={styles.placeImage}
+              />
+            </View>
+          )}
+        </View>
+      )}
+    </TouchableOpacity>
+  );
+})}
             </View>
           </>
         )}
 
-        {/* Footer hint */}
-        <View style={styles.footerHint}>
-          <Icon name="information-outline" size={13} color={MUTED} />
-          <Text style={styles.footerHintText}>
-            {activeTab === 'photos'
-              ? 'Tap a photo to view it'
-              : 'Tap any card to expand'}
-          </Text>
-        </View>
+        {/* ── Footer hint ── */}
+        {!loading && !error && (
+          <View style={styles.footerHint}>
+            <Icon name="information-outline" size={13} color={MUTED} />
+            <Text style={styles.footerHintText}>
+              {activeTab === 'photos' ? 'Tap a photo to view it' : 'Tap any card to expand'}
+            </Text>
+          </View>
+        )}
 
       </ScrollView>
     </SafeAreaView>
@@ -318,300 +383,81 @@ export default function ProfileScreen() {
 
 // ─── Styles ───────────────────────────────────────────────────────────────────
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: BG,
-  },
-
-  // ── Header ─────────────────────────────────────────────────
+  container: { flex: 1, backgroundColor: BG , paddingBottom: 110 },
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 26,
-    paddingTop: 10,
-    paddingBottom: 18,
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
+    paddingHorizontal: 26, paddingTop: 10, paddingBottom: 18,
   },
-
   headerEyebrow: {
-    fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',
-    color: MUTED,
-    letterSpacing: 2,
-    textTransform: 'uppercase',
-    marginBottom: 4,
+    fontSize: 13, fontFamily: 'Coolvetica-Regular', color: MUTED,
+    letterSpacing: 2, textTransform: 'uppercase', marginBottom: 4,
   },
-
-  headerTitle: {
-    fontSize: 34,
-    fontFamily: 'Coolvetica-Heavy-Regular',
-    color: DARK,
-    lineHeight: 38,
-  },
-
+  headerTitle: { fontSize: 34, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK, lineHeight: 38 },
   countBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 5,
-    backgroundColor: WHITE,
-    paddingHorizontal: 12,
-    paddingVertical: 7,
-    borderRadius: 20,
-    borderWidth: 1.5,
-    borderColor: BORDER,
+    flexDirection: 'row', alignItems: 'center', gap: 5, backgroundColor: WHITE,
+    paddingHorizontal: 12, paddingVertical: 7, borderRadius: 20, borderWidth: 1.5, borderColor: BORDER,
   },
-
-  countBadgeText: {
-    fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',
-    color: DARK,
-  },
-
-  // ── Accent Bar ─────────────────────────────────────────────
-  accentBar: {
-    flexDirection: 'row',
-    paddingHorizontal: 26,
-    gap: 6,
-    marginBottom: 10,
-  },
-
-  accentLine: {
-    height: 3,
-    flex: 1,
-    backgroundColor: YELLOW,
-    borderRadius: 4,
-  },
-
-  accentLineShort: {
-    flex: 0,
-    width: 24,
-    backgroundColor: DARK,
-  },
-
-  // ── Tabs ───────────────────────────────────────────────────
-  tabsContainer: {
-    flexDirection: 'row',
-    paddingHorizontal: 24,
-    paddingBottom: 12,
-    gap: 8,
-  },
-
+  countBadgeText: { fontSize: 13, fontFamily: 'Coolvetica-Regular', color: DARK },
+  accentBar: { flexDirection: 'row', paddingHorizontal: 26, gap: 6, marginBottom: 10 },
+  accentLine: { height: 3, flex: 1, backgroundColor: YELLOW, borderRadius: 4 },
+  accentLineShort: { flex: 0, width: 24, backgroundColor: DARK },
+  tabsContainer: { flexDirection: 'row', paddingHorizontal: 24, paddingBottom: 12, gap: 8 },
   tab: {
-    flex: 1,
-    paddingVertical: 10,
-    borderRadius: 14,
-    backgroundColor: WHITE,
-    borderWidth: 1.5,
-    borderColor: BORDER,
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1, paddingVertical: 10, borderRadius: 14, backgroundColor: WHITE,
+    borderWidth: 1.5, borderColor: BORDER, alignItems: 'center', justifyContent: 'center',
   },
-
-  tabActive: {
-    backgroundColor: YELLOW,
-    borderColor: DARK,
-  },
-
-  tabLabel: {
-    fontSize: 11,
-    fontFamily: 'Coolvetica-Bold',
-    color: MUTED,
-    letterSpacing: 0.5,
-  },
-
-  tabLabelActive: {
-    color: DARK,
-  },
-
-  // ── Scroll ─────────────────────────────────────────────────
-  scrollContent: {
-    paddingHorizontal: 20,
-    paddingTop: 8,
-    paddingBottom: 36,
-  },
-
+  tabActive: { backgroundColor: YELLOW, borderColor: DARK },
+  tabLabel: { fontSize: 11, fontFamily: 'Coolvetica-Bold', color: MUTED, letterSpacing: 0.5 },
+  tabLabelActive: { color: DARK },
+  scrollContent: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 36 },
   sectionLabel: {
-    fontSize: 12,
-    fontFamily: 'Coolvetica-Bold',
-    color: MUTED,
-    letterSpacing: 1.5,
-    textTransform: 'uppercase',
-    marginBottom: 14,
-    marginLeft: 2,
+    fontSize: 12, fontFamily: 'Coolvetica-Bold', color: MUTED,
+    letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 14, marginLeft: 2,
   },
-
-  // ── Photos ─────────────────────────────────────────────────
-  photosGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 12,
-  },
-
+  photosGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
   photoCard: {
-    width: CARD_WIDTH,
-    backgroundColor: WHITE,
-    borderRadius: 18,
-    borderWidth: 1.5,
-    borderColor: BORDER,
-    overflow: 'hidden',
-    shadowColor: DARK,
-    shadowOpacity: 0.06,
-    shadowRadius: 10,
-    elevation: 3,
+    width: CARD_WIDTH, backgroundColor: WHITE, borderRadius: 18, borderWidth: 1.5,
+    borderColor: BORDER, overflow: 'hidden', shadowColor: DARK, shadowOpacity: 0.06,
+    shadowRadius: 10, elevation: 3,
   },
-
-  photoImage: {
-    width: '100%',
-    height: CARD_WIDTH,
-  },
-
+  photoImage: { width: '100%', height: CARD_WIDTH },
   categoryPill: {
-    position: 'absolute',
-    top: 10,
-    left: 10,
-    backgroundColor: YELLOW,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: DARK,
+    position: 'absolute', top: 10, left: 10, backgroundColor: YELLOW,
+    paddingHorizontal: 8, paddingVertical: 3, borderRadius: 10, borderWidth: 1, borderColor: DARK,
   },
-
-  categoryPillText: {
-    fontSize: 10,
-    fontFamily: 'Coolvetica-Bold',
-    color: DARK,
-  },
-
-  photoInfo: {
-    padding: 12,
-  },
-
-  yearRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    marginTop: 3,
-  },
-
-  // ── Stories ────────────────────────────────────────────────
+  categoryPillText: { fontSize: 10, fontFamily: 'Coolvetica-Bold', color: DARK },
+  photoInfo: { padding: 12 },
+  yearRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 3 },
   storyCard: {
-    backgroundColor: WHITE,
-    borderRadius: 18,
-    borderWidth: 1.5,
-    borderColor: BORDER,
-    padding: 16,
-    shadowColor: DARK,
-    shadowOpacity: 0.05,
-    shadowRadius: 10,
-    elevation: 2,
+    backgroundColor: WHITE, borderRadius: 18, borderWidth: 1.5, borderColor: BORDER,
+    padding: 16, shadowColor: DARK, shadowOpacity: 0.05, shadowRadius: 10, elevation: 2,
   },
-
-  storyTopRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 14,
-  },
-
-  storyAvatar: {
-    width: 48,
-    height: 48,
-    borderRadius: 14,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  storyBody: {
-    marginTop: 14,
-    paddingTop: 14,
-    borderTopWidth: 1,
-    borderTopColor: BORDER,
-  },
-
-  storyContent: {
-    fontSize: 15,
-    lineHeight: 22,
-    color: '#555',
-    fontFamily: 'Coolvetica-Regular',
-  },
-
-  // ── Places ─────────────────────────────────────────────────
+  storyTopRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
+  storyAvatar: { width: 48, height: 48, borderRadius: 14, justifyContent: 'center', alignItems: 'center' },
+  storyBody: { marginTop: 14, paddingTop: 14, borderTopWidth: 1, borderTopColor: BORDER },
+  storyContent: { fontSize: 15, lineHeight: 22, color: '#555', fontFamily: 'Coolvetica-Regular' },
   placeCard: {
-    backgroundColor: WHITE,
-    borderRadius: 18,
-    borderWidth: 1.5,
-    borderColor: BORDER,
-    padding: 16,
-    shadowColor: DARK,
-    shadowOpacity: 0.05,
-    shadowRadius: 10,
-    elevation: 2,
+    backgroundColor: WHITE, borderRadius: 18, borderWidth: 1.5, borderColor: BORDER,
+    padding: 16, shadowColor: DARK, shadowOpacity: 0.05, shadowRadius: 10, elevation: 2,
   },
-
-  placeTopRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-
+  placeTopRow: { flexDirection: 'row', alignItems: 'center' },
   placeAvatar: {
-    width: 48,
-    height: 48,
-    borderRadius: 14,
-    backgroundColor: YELLOW + '33',
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: 48, height: 48, borderRadius: 14,
+    backgroundColor: YELLOW + '33', justifyContent: 'center', alignItems: 'center',
   },
-
-  placeDropdown: {
-    marginTop: 14,
-    borderTopWidth: 1,
-    borderTopColor: BORDER,
-    paddingTop: 14,
+  placeDropdown: { marginTop: 14, borderTopWidth: 1, borderTopColor: BORDER, paddingTop: 14 },
+  placeDescription: { fontSize: 14, color: '#555', fontFamily: 'Coolvetica-Regular', lineHeight: 21, marginBottom: 14 },
+  placePhotosRow: { flexDirection: 'row', justifyContent: 'space-between' },
+  placeImage: { width: 76, height: 76, borderRadius: 12 },
+  cardTitle: { fontSize: 16, fontFamily: 'Coolvetica-Bold', color: DARK },
+  cardMeta: { fontSize: 12, color: MUTED, fontFamily: 'Coolvetica-Regular' },
+  centerState: { alignItems: 'center', justifyContent: 'center', paddingVertical: 60, gap: 12 },
+  centerStateText: { fontSize: 14, fontFamily: 'Coolvetica-Regular', color: MUTED, textAlign: 'center' },
+  retryBtn: {
+    marginTop: 8, backgroundColor: YELLOW, paddingHorizontal: 24,
+    paddingVertical: 10, borderRadius: 12, borderWidth: 1.5, borderColor: DARK,
   },
-
-  placeDescription: {
-    fontSize: 14,
-    color: '#555',
-    fontFamily: 'Coolvetica-Regular',
-    lineHeight: 21,
-    marginBottom: 14,
-  },
-
-  placePhotosRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-
-  placeImage: {
-    width: 76,
-    height: 76,
-    borderRadius: 12,
-  },
-
-  // ── Shared ─────────────────────────────────────────────────
-  cardTitle: {
-    fontSize: 16,
-    fontFamily: 'Coolvetica-Bold',
-    color: DARK,
-  },
-
-  cardMeta: {
-    fontSize: 12,
-    color: MUTED,
-    fontFamily: 'Coolvetica-Regular',
-  },
-
-  footerHint: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 6,
-    marginTop: 24,
-  },
-
-  footerHintText: {
-    fontSize: 12,
-    fontFamily: 'Coolvetica-Regular',
-    color: MUTED,
-  },
+  retryBtnText: { fontSize: 14, fontFamily: 'Coolvetica-Bold', color: DARK },
+  footerHint: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, marginTop: 24 },
+  footerHintText: { fontSize: 12, fontFamily: 'Coolvetica-Regular', color: MUTED },
 });
