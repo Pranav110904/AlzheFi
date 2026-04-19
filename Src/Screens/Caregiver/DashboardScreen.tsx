@@ -396,17 +396,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center', alignItems: 'center',
   },
   eyebrow: {
-    fontSize: 13, fontFamily: 'Coolvetica-Regular',
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED, letterSpacing: 1, textTransform: 'uppercase', marginBottom: 2,
   },
-  headerTitle: { fontSize: 22, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK },
+  headerTitle: { fontSize: 22, fontFamily: 'SpaceGrotesk-Bold', color: DARK },
   avatarCircle: {
     width: 48, height: 48, borderRadius: 24,
     backgroundColor: DARK, justifyContent: 'center', alignItems: 'center',
   },
-  avatarText: { fontSize: 20, fontFamily: 'Coolvetica-Heavy-Regular', color: YELLOW },
+  avatarText: { fontSize: 20, fontFamily: 'SpaceGrotesk-Bold', color: YELLOW },
   dateText: {
-    fontSize: 13, fontFamily: 'Coolvetica-Regular', color: MUTED,
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: MUTED,
     paddingHorizontal: 26, paddingBottom: 14, backgroundColor: WHITE,
   },
 
@@ -419,7 +419,7 @@ const styles = StyleSheet.create({
 
   section: { paddingHorizontal: 20, marginBottom: 28 },
   sectionLabel: {
-    fontSize: 11, fontFamily: 'Coolvetica-Bold',
+    fontSize: 11, fontFamily: 'SpaceGrotesk-Bold',
     color: MUTED, letterSpacing: 1.2, marginBottom: 14,
   },
 
@@ -429,7 +429,7 @@ const styles = StyleSheet.create({
     borderWidth: 1.5, borderColor: BORDER, padding: 18, alignItems: 'center',
   },
   statValue: {
-    fontSize: 30, fontFamily: 'Coolvetica-Heavy-Regular',
+    fontSize: 30, fontFamily: 'SpaceGrotesk-Bold',
     color: DARK, marginTop: 10, marginBottom: 4,
   },
   statSkeleton: {
@@ -437,7 +437,7 @@ const styles = StyleSheet.create({
     backgroundColor: BORDER, marginTop: 10, marginBottom: 4,
   },
   statLabel: {
-    fontSize: 11, fontFamily: 'Coolvetica-Bold',
+    fontSize: 11, fontFamily: 'SpaceGrotesk-Bold',
     color: MUTED, textAlign: 'center',
   },
 
@@ -451,8 +451,8 @@ const styles = StyleSheet.create({
     backgroundColor: YELLOW, borderWidth: 1.5, borderColor: DARK,
     justifyContent: 'center', alignItems: 'center',
   },
-  linkTitle: { fontSize: 16, fontFamily: 'Coolvetica-Bold', color: DARK, marginBottom: 4 },
-  linkSub: { fontSize: 12, fontFamily: 'Coolvetica-Regular', color: MUTED, lineHeight: 17 },
+  linkTitle: { fontSize: 16, fontFamily: 'SpaceGrotesk-Bold', color: DARK, marginBottom: 4 },
+  linkSub: { fontSize: 12, fontFamily: 'SpaceGrotesk-Regular', color: MUTED, lineHeight: 17 },
   linkInputRow: { flexDirection: 'row', gap: 10, alignItems: 'center' },
   linkInputWrap: {
     flex: 1, flexDirection: 'row', alignItems: 'center',
@@ -460,7 +460,7 @@ const styles = StyleSheet.create({
     borderRadius: 14, paddingHorizontal: 14, height: 48,
   },
   linkInput: {
-    flex: 1, fontSize: 14, fontFamily: 'Coolvetica-Regular', color: DARK, padding: 0,
+    flex: 1, fontSize: 14, fontFamily: 'SpaceGrotesk-Regular', color: DARK, padding: 0,
   },
   linkBtn: {
     width: 48, height: 48, borderRadius: 14,
@@ -472,8 +472,8 @@ const styles = StyleSheet.create({
     marginTop: 10, backgroundColor: '#FEF0EE', borderRadius: 10, padding: 10,
   },
   linkSuccessBg: { backgroundColor: '#ECFDF5' },
-  linkErrorText: { fontSize: 12, fontFamily: 'Coolvetica-Regular', color: '#991B1B', flex: 1 },
-  linkSuccessText: { fontSize: 12, fontFamily: 'Coolvetica-Regular', color: '#065F46', flex: 1 },
+  linkErrorText: { fontSize: 12, fontFamily: 'SpaceGrotesk-Regular', color: '#991B1B', flex: 1 },
+  linkSuccessText: { fontSize: 12, fontFamily: 'SpaceGrotesk-Regular', color: '#065F46', flex: 1 },
 
   quickGrid: { gap: 10 },
   quickCard: {
@@ -485,23 +485,23 @@ const styles = StyleSheet.create({
     backgroundColor: YELLOW, borderWidth: 1.5, borderColor: DARK,
     justifyContent: 'center', alignItems: 'center',
   },
-  quickLabel: { fontSize: 14, fontFamily: 'Coolvetica-Bold', color: DARK, flex: 1 },
+  quickLabel: { fontSize: 14, fontFamily: 'SpaceGrotesk-Bold', color: DARK, flex: 1 },
 
   emergencyCard: {
     backgroundColor: '#FEF0EE', borderWidth: 1.5,
     borderColor: '#FECACA', borderRadius: 16, padding: 20,
   },
   emergencyHeader: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 8 },
-  emergencyTitle: { fontSize: 17, fontFamily: 'Coolvetica-Heavy-Regular', color: '#991B1B' },
+  emergencyTitle: { fontSize: 17, fontFamily: 'SpaceGrotesk-Bold', color: '#991B1B' },
   emergencyText: {
-    fontSize: 13, fontFamily: 'Coolvetica-Regular',
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular',
     color: '#7F1D1D', lineHeight: 20, marginBottom: 16,
   },
   emergencyBtn: {
     backgroundColor: '#EF4444', borderRadius: 12, padding: 14,
     flexDirection: 'row', justifyContent: 'center', alignItems: 'center',
   },
-  emergencyBtnText: { fontSize: 15, fontFamily: 'Coolvetica-Bold', color: WHITE },
+  emergencyBtnText: { fontSize: 15, fontFamily: 'SpaceGrotesk-Bold', color: WHITE },
 
   // ── Header (replace all old header styles) ──────────────────
 header: {
@@ -526,7 +526,7 @@ avatarCircle: {
   backgroundColor: DARK, justifyContent: 'center', alignItems: 'center',
 },
 avatarText: {
-  fontSize: 18, fontFamily: 'Coolvetica-Heavy-Regular', color: YELLOW,
+  fontSize: 18, fontFamily: 'SpaceGrotesk-Bold', color: YELLOW,
 },
 
 // ── Hero text block ─────────────────────────────────────────
@@ -535,7 +535,7 @@ headerHero: {
   paddingBottom: 22,
 },
 greetingEyebrow: {
-  fontSize: 13, fontFamily: 'Coolvetica-Regular',
+  fontSize: 13, fontFamily: 'SpaceGrotesk-Regular',
   color: MUTED, letterSpacing: 2, textTransform: 'uppercase',
   marginBottom: 6,
 },
@@ -547,7 +547,7 @@ nameBlock: {
   flexWrap: 'wrap',
 },
 headerDr: {
-  fontSize: 48, fontFamily: 'Coolvetica-Heavy-Regular',
+  fontSize: 48, fontFamily: 'SpaceGrotesk-Bold',
   color: MUTED, lineHeight: 50,
 },
 namePill: {
@@ -559,11 +559,11 @@ namePill: {
   paddingVertical: 4,
 },
 headerName: {
-  fontSize: 48, fontFamily: 'Coolvetica-Heavy-Regular',
+  fontSize: 48, fontFamily: 'SpaceGrotesk-Bold',
   color: DARK, lineHeight: 54,
 },
 headerSub: {
-  fontSize: 12, fontFamily: 'Coolvetica-Regular',
+  fontSize: 12, fontFamily: 'SpaceGrotesk-Regular',
   color: MUTED, letterSpacing: 0.5,
 },
 

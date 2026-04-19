@@ -58,41 +58,6 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Coolvetica-Crammed-Book.otf</string>
-		<string>Coolvetica-Compressed-Extra-Light.otf</string>
-		<string>Coolvetica-Ultra-Light-Regular.otf</string>
-		<string>Coolvetica-Compressed.otf</string>
-		<string>Coolvetica-Crammed-Bold.otf</string>
-		<string>Coolvetica-Extra-Light-Italic.otf</string>
-		<string>Coolvetica-Crammed-Extra-Light.otf</string>
-		<string>Coolvetica-Condensed-Extra-Light.otf</string>
-		<string>Coolvetica-Heavy-Italic.otf</string>
-		<string>Coolvetica-Crammed-Light.otf</string>
-		<string>Coolvetica-Compressed-Light.otf</string>
-		<string>Coolvetica-Ultra-Light-Italic.otf</string>
-		<string>Coolvetica-Book-Italic.otf</string>
-		<string>Coolvetica-Light-Italic.otf</string>
-		<string>Coolvetica-Bold.otf</string>
-		<string>Coolvetica-Compressed-Heavy.otf</string>
-		<string>Coolvetica-Crammed-Heavy.otf</string>
-		<string>Coolvetica-Bold-Italic.otf</string>
-		<string>Coolvetica-Heavy-Regular.otf</string>
-		<string>Coolvetica-Condensed-Light.otf</string>
-		<string>Coolvetica-Crammed.otf</string>
-		<string>Coolvetica-Crammed-Ultra-Light.otf</string>
-		<string>Coolvetica-Condensed-Ultra-Light.otf</string>
-		<string>Coolvetica-Book-Regular.otf</string>
-		<string>Coolvetica-Condensed-Bold.otf</string>
-		<string>Coolvetica-Compressed-Ultra-Light.otf</string>
-		<string>Coolvetica-Extra-Light-Regular.otf</string>
-		<string>Coolvetica-Condensed-Book.otf</string>
-		<string>Coolvetica-Regular.otf</string>
-		<string>Coolvetica-Compressed-Book.otf</string>
-		<string>Coolvetica-Condensed.otf</string>
-		<string>Coolvetica-Light-Regular.otf</string>
-		<string>Coolvetica-Compressed-Bold.otf</string>
-		<string>Coolvetica-Condensed-Heavy.otf</string>
-		<string>Coolvetica-Italic.otf</string>
 		<string>Fontisto.ttf</string>
 		<string>Octicons.ttf</string>
 		<string>Feather.ttf</string>
@@ -112,6 +77,46 @@
 		<string>SimpleLineIcons.ttf</string>
 		<string>FontAwesome6_Brands.ttf</string>
 		<string>MaterialIcons.ttf</string>
+		<string>Coolvetica-Crammed-Book.otf</string>
+		<string>Coolvetica-Compressed-Extra-Light.otf</string>
+		<string>Coolvetica-Ultra-Light-Regular.otf</string>
+		<string>Coolvetica-Compressed.otf</string>
+		<string>Coolvetica-Crammed-Bold.otf</string>
+		<string>Coolvetica-Extra-Light-Italic.otf</string>
+		<string>SpaceGrotesk-SemiBold.otf</string>
+		<string>Coolvetica-Crammed-Extra-Light.otf</string>
+		<string>Coolvetica-Condensed-Extra-Light.otf</string>
+		<string>Coolvetica-Heavy-Italic.otf</string>
+		<string>Coolvetica-Crammed-Light.otf</string>
+		<string>Coolvetica-Compressed-Light.otf</string>
+		<string>Coolvetica-Ultra-Light-Italic.otf</string>
+		<string>Coolvetica-Book-Italic.otf</string>
+		<string>Coolvetica-Light-Italic.otf</string>
+		<string>Coolvetica-Bold.otf</string>
+		<string>SpaceGrotesk-Regular.otf</string>
+		<string>Coolvetica-Compressed-Heavy.otf</string>
+		<string>Coolvetica-Crammed-Heavy.otf</string>
+		<string>Coolvetica-Bold-Italic.otf</string>
+		<string>Coolvetica-Heavy-Regular.otf</string>
+		<string>SpaceGrotesk-Light.otf</string>
+		<string>SpaceGrotesk-Bold.otf</string>
+		<string>Coolvetica-Condensed-Light.otf</string>
+		<string>Coolvetica-Crammed.otf</string>
+		<string>Coolvetica-Crammed-Ultra-Light.otf</string>
+		<string>Coolvetica-Condensed-Ultra-Light.otf</string>
+		<string>Coolvetica-Book-Regular.otf</string>
+		<string>Coolvetica-Condensed-Bold.otf</string>
+		<string>SpaceGrotesk-Medium.otf</string>
+		<string>Coolvetica-Compressed-Ultra-Light.otf</string>
+		<string>Coolvetica-Extra-Light-Regular.otf</string>
+		<string>Coolvetica-Condensed-Book.otf</string>
+		<string>Coolvetica-Regular.otf</string>
+		<string>Coolvetica-Compressed-Book.otf</string>
+		<string>Coolvetica-Condensed.otf</string>
+		<string>Coolvetica-Light-Regular.otf</string>
+		<string>Coolvetica-Compressed-Bold.otf</string>
+		<string>Coolvetica-Condensed-Heavy.otf</string>
+		<string>Coolvetica-Italic.otf</string>
 	</array>
 </dict>
 </plist>

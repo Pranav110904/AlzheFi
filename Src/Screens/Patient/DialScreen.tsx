@@ -63,14 +63,15 @@ function ContactCard({ contact, onDelete }: { contact: Contact; onDelete: (id: s
   const onPressOut = () => Animated.spring(scale, { toValue: 1,    useNativeDriver: true, speed: 20 }).start();
 
   const handleCall = useCallback(async () => {
-    try {
-      const canOpen = await Linking.canOpenURL(`tel:${contact.phone}`);
-      if (canOpen) await Linking.openURL(`tel:${contact.phone}`);
-      else Alert.alert('Error', 'Phone dialer not available');
-    } catch {
-      Alert.alert('Error', 'Could not open phone dialer');
-    }
-  }, [contact.phone]);
+  try {
+    const phoneNumber = `tel:${contact.phone}`;
+
+    await Linking.openURL(phoneNumber);
+
+  } catch (error) {
+    Alert.alert('Error', 'Could not open phone dialer');
+  }
+}, [contact.phone]);
 
   const handleDelete = useCallback(() => {
     Alert.alert(
@@ -486,7 +487,7 @@ const styles = StyleSheet.create({
 
   headerEyebrow: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     letterSpacing: 2,
     textTransform: 'uppercase',
@@ -495,7 +496,7 @@ const styles = StyleSheet.create({
 
   headerTitle: {
     fontSize: 34,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
     lineHeight: 38,
   },
@@ -514,7 +515,7 @@ const styles = StyleSheet.create({
 
   addBtnText: {
     fontSize: 14,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 
@@ -550,14 +551,14 @@ const styles = StyleSheet.create({
 
   sectionLabel: {
     fontSize: 12,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: MUTED,
     letterSpacing: 1.5,
     textTransform: 'uppercase',
   },
 
   sectionCount: {
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
   },
 
@@ -604,7 +605,7 @@ const styles = StyleSheet.create({
 
   cardName: {
     fontSize: 16,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
     marginBottom: 3,
   },
@@ -619,7 +620,7 @@ const styles = StyleSheet.create({
 
   cardRelation: {
     fontSize: 12,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
   },
 
@@ -655,7 +656,7 @@ const styles = StyleSheet.create({
 
   callPillText: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 
@@ -683,13 +684,13 @@ const styles = StyleSheet.create({
 
   emptyTitle: {
     fontSize: 16,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 
   emptySubtitle: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     textAlign: 'center',
   },
@@ -742,7 +743,7 @@ const modal = StyleSheet.create({
 
   title: {
     fontSize: 24,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 
@@ -782,7 +783,7 @@ const modal = StyleSheet.create({
 
   errorText: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: '#DC2626',
     flex: 1,
   },
@@ -790,7 +791,7 @@ const modal = StyleSheet.create({
   // Labels + Inputs
   label: {
     fontSize: 11,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: MUTED,
     textTransform: 'uppercase',
     letterSpacing: 1.5,
@@ -805,7 +806,7 @@ const modal = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: Platform.OS === 'ios' ? 13 : 10,
     fontSize: 15,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: DARK,
     backgroundColor: WHITE,
     marginBottom: 2,
@@ -818,7 +819,7 @@ const modal = StyleSheet.create({
 
   fieldError: {
     fontSize: 12,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: '#DC2626',
     marginBottom: 4,
     marginLeft: 4,
@@ -877,7 +878,7 @@ const modal = StyleSheet.create({
 
   saveBtnText: {
     fontSize: 15,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 });

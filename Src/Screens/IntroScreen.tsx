@@ -167,7 +167,6 @@ export default function IntroScreen({ onFinish }: any) {
   );
 }
 
-/* ---------- STYLES ---------- */
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
@@ -183,7 +182,7 @@ const styles = StyleSheet.create({
 
   headerTitle: {
     fontSize: 40,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     textAlign: 'center',
     color: '#1F2937',
     marginBottom: 10,
@@ -218,7 +217,7 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 30,
-    fontFamily: 'Coolvetica-Light-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     textAlign: 'left',
     color: '#333',
     marginBottom: 28,
@@ -227,7 +226,7 @@ const styles = StyleSheet.create({
   },
 
   bold: {
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: '#1F2937',
   },
 
@@ -246,7 +245,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: '#fff',
     fontSize: 20,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Medium',
   },
 
   knob: {

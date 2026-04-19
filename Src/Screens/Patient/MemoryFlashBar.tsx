@@ -94,15 +94,13 @@ const styles = StyleSheet.create({
     color: '#6B7280',
     marginBottom: 2,
     fontWeight: '600',
-     fontFamily: 'Coolvetica-Bold',
-   
+    fontFamily: 'SpaceGrotesk-Bold',
   },
 
-  
   text: {
-  fontSize: 20,
-  color: '#1F2937',
-  lineHeight: 22,
-  fontFamily: 'Coolvetica-Bold',
-}
+    fontSize: 20,
+    color: '#1F2937',
+    lineHeight: 22,
+    fontFamily: 'SpaceGrotesk-Bold',
+  },
 });

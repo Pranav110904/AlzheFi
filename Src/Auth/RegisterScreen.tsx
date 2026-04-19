@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
 
   brand: {
     fontSize: 44,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     textAlign: 'center',
     color: '#1F2937',
     marginBottom: 4,
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#6B7280',
     marginBottom: 28,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
   },
 
   headerBlock: {
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
 
   headerTitle: {
     fontSize: 28,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: '#1F2937',
   },
 
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#6B7280',
     marginTop: 4,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
   },
 
   card: {
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     color: '#1F2937',
     marginBottom: 6,
     marginTop: 12,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
   },
 
   input: {
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     padding: 16,
     fontSize: 16,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: '#1F2937',
   },
 
@@ -269,7 +269,7 @@ const styles = StyleSheet.create({
   },
 
   roleText: {
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: '#6B7280',
     fontSize: 16,
   },
@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
   registerText: {
     color: '#1F2937',
     fontSize: 18,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
   },
 
   footer: {
@@ -300,12 +300,12 @@ const styles = StyleSheet.create({
 
   footerText: {
     color: '#6B7280',
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
   },
 
   loginLink: {
     color: '#1F2937',
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
   },
 
   circle1: {
@@ -337,4 +337,4 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 120,
     borderTopRightRadius: 120,
   },
-})
+});

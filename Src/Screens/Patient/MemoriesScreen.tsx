@@ -384,80 +384,154 @@ const fetchTab = async (tab: TabType) => {
 // ─── Styles ───────────────────────────────────────────────────────────────────
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: BG , paddingBottom: 110 },
+
   header: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
     paddingHorizontal: 26, paddingTop: 10, paddingBottom: 18,
   },
+
   headerEyebrow: {
-    fontSize: 13, fontFamily: 'Coolvetica-Regular', color: MUTED,
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: MUTED,
     letterSpacing: 2, textTransform: 'uppercase', marginBottom: 4,
   },
-  headerTitle: { fontSize: 34, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK, lineHeight: 38 },
+
+  headerTitle: {
+    fontSize: 34, fontFamily: 'SpaceGrotesk-Bold', color: DARK, lineHeight: 38
+  },
+
   countBadge: {
     flexDirection: 'row', alignItems: 'center', gap: 5, backgroundColor: WHITE,
     paddingHorizontal: 12, paddingVertical: 7, borderRadius: 20, borderWidth: 1.5, borderColor: BORDER,
   },
-  countBadgeText: { fontSize: 13, fontFamily: 'Coolvetica-Regular', color: DARK },
+
+  countBadgeText: {
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: DARK
+  },
+
   accentBar: { flexDirection: 'row', paddingHorizontal: 26, gap: 6, marginBottom: 10 },
+
   accentLine: { height: 3, flex: 1, backgroundColor: YELLOW, borderRadius: 4 },
+
   accentLineShort: { flex: 0, width: 24, backgroundColor: DARK },
+
   tabsContainer: { flexDirection: 'row', paddingHorizontal: 24, paddingBottom: 12, gap: 8 },
+
   tab: {
     flex: 1, paddingVertical: 10, borderRadius: 14, backgroundColor: WHITE,
     borderWidth: 1.5, borderColor: BORDER, alignItems: 'center', justifyContent: 'center',
   },
+
   tabActive: { backgroundColor: YELLOW, borderColor: DARK },
-  tabLabel: { fontSize: 11, fontFamily: 'Coolvetica-Bold', color: MUTED, letterSpacing: 0.5 },
+
+  tabLabel: {
+    fontSize: 11, fontFamily: 'SpaceGrotesk-Bold', color: MUTED, letterSpacing: 0.5
+  },
+
   tabLabelActive: { color: DARK },
+
   scrollContent: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 36 },
+
   sectionLabel: {
-    fontSize: 12, fontFamily: 'Coolvetica-Bold', color: MUTED,
+    fontSize: 12, fontFamily: 'SpaceGrotesk-Bold', color: MUTED,
     letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 14, marginLeft: 2,
   },
+
   photosGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
+
   photoCard: {
     width: CARD_WIDTH, backgroundColor: WHITE, borderRadius: 18, borderWidth: 1.5,
     borderColor: BORDER, overflow: 'hidden', shadowColor: DARK, shadowOpacity: 0.06,
     shadowRadius: 10, elevation: 3,
   },
+
   photoImage: { width: '100%', height: CARD_WIDTH },
+
   categoryPill: {
     position: 'absolute', top: 10, left: 10, backgroundColor: YELLOW,
     paddingHorizontal: 8, paddingVertical: 3, borderRadius: 10, borderWidth: 1, borderColor: DARK,
   },
-  categoryPillText: { fontSize: 10, fontFamily: 'Coolvetica-Bold', color: DARK },
+
+  categoryPillText: {
+    fontSize: 10, fontFamily: 'SpaceGrotesk-Bold', color: DARK
+  },
+
   photoInfo: { padding: 12 },
+
   yearRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 3 },
+
   storyCard: {
     backgroundColor: WHITE, borderRadius: 18, borderWidth: 1.5, borderColor: BORDER,
     padding: 16, shadowColor: DARK, shadowOpacity: 0.05, shadowRadius: 10, elevation: 2,
   },
+
   storyTopRow: { flexDirection: 'row', alignItems: 'center', gap: 14 },
-  storyAvatar: { width: 48, height: 48, borderRadius: 14, justifyContent: 'center', alignItems: 'center' },
-  storyBody: { marginTop: 14, paddingTop: 14, borderTopWidth: 1, borderTopColor: BORDER },
-  storyContent: { fontSize: 15, lineHeight: 22, color: '#555', fontFamily: 'Coolvetica-Regular' },
+
+  storyAvatar: {
+    width: 48, height: 48, borderRadius: 14, justifyContent: 'center', alignItems: 'center'
+  },
+
+  storyBody: {
+    marginTop: 14, paddingTop: 14, borderTopWidth: 1, borderTopColor: BORDER
+  },
+
+  storyContent: {
+    fontSize: 15, lineHeight: 22, color: '#555', fontFamily: 'SpaceGrotesk-Regular'
+  },
+
   placeCard: {
     backgroundColor: WHITE, borderRadius: 18, borderWidth: 1.5, borderColor: BORDER,
     padding: 16, shadowColor: DARK, shadowOpacity: 0.05, shadowRadius: 10, elevation: 2,
   },
+
   placeTopRow: { flexDirection: 'row', alignItems: 'center' },
+
   placeAvatar: {
     width: 48, height: 48, borderRadius: 14,
     backgroundColor: YELLOW + '33', justifyContent: 'center', alignItems: 'center',
   },
-  placeDropdown: { marginTop: 14, borderTopWidth: 1, borderTopColor: BORDER, paddingTop: 14 },
-  placeDescription: { fontSize: 14, color: '#555', fontFamily: 'Coolvetica-Regular', lineHeight: 21, marginBottom: 14 },
+
+  placeDropdown: {
+    marginTop: 14, borderTopWidth: 1, borderTopColor: BORDER, paddingTop: 14
+  },
+
+  placeDescription: {
+    fontSize: 14, color: '#555', fontFamily: 'SpaceGrotesk-Regular', lineHeight: 21, marginBottom: 14
+  },
+
   placePhotosRow: { flexDirection: 'row', justifyContent: 'space-between' },
+
   placeImage: { width: 76, height: 76, borderRadius: 12 },
-  cardTitle: { fontSize: 16, fontFamily: 'Coolvetica-Bold', color: DARK },
-  cardMeta: { fontSize: 12, color: MUTED, fontFamily: 'Coolvetica-Regular' },
-  centerState: { alignItems: 'center', justifyContent: 'center', paddingVertical: 60, gap: 12 },
-  centerStateText: { fontSize: 14, fontFamily: 'Coolvetica-Regular', color: MUTED, textAlign: 'center' },
+
+  cardTitle: {
+    fontSize: 16, fontFamily: 'SpaceGrotesk-Bold', color: DARK
+  },
+
+  cardMeta: {
+    fontSize: 12, color: MUTED, fontFamily: 'SpaceGrotesk-Regular'
+  },
+
+  centerState: {
+    alignItems: 'center', justifyContent: 'center', paddingVertical: 60, gap: 12
+  },
+
+  centerStateText: {
+    fontSize: 14, fontFamily: 'SpaceGrotesk-Regular', color: MUTED, textAlign: 'center'
+  },
+
   retryBtn: {
     marginTop: 8, backgroundColor: YELLOW, paddingHorizontal: 24,
     paddingVertical: 10, borderRadius: 12, borderWidth: 1.5, borderColor: DARK,
   },
-  retryBtnText: { fontSize: 14, fontFamily: 'Coolvetica-Bold', color: DARK },
-  footerHint: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, marginTop: 24 },
-  footerHintText: { fontSize: 12, fontFamily: 'Coolvetica-Regular', color: MUTED },
+
+  retryBtnText: {
+    fontSize: 14, fontFamily: 'SpaceGrotesk-Bold', color: DARK
+  },
+
+  footerHint: {
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, marginTop: 24
+  },
+
+  footerHintText: {
+    fontSize: 12, fontFamily: 'SpaceGrotesk-Regular', color: MUTED
+  },
 });

@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
   /* BRAND */
   brand: {
     fontSize: 44,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     textAlign: 'center',
     color: '#1F2937',
     marginBottom: 4,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#6B7280',
     marginBottom: 28,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
   },
 
   /* HEADER */
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
 
   headerTitle: {
     fontSize: 28,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: '#1F2937',
   },
 
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#6B7280',
     marginTop: 4,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
   },
 
   /* CARD */
@@ -184,13 +184,13 @@ const styles = StyleSheet.create({
     color: '#1F2937',
     marginBottom: 6,
     marginTop: 10,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
   },
 
   input: {
     backgroundColor: '#F3F4F6',
     borderRadius: 14,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     padding: 16,
     fontSize: 16,
     color: '#1F2937',
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
   loginButtonText: {
     color: '#1F2937',
     fontSize: 18,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
   },
 
   footer: {
@@ -223,13 +223,13 @@ const styles = StyleSheet.create({
   footerText: {
     color: '#6B7280',
     fontSize: 14,
-    fontFamily: 'Coolvetica-Regular'
+    fontFamily: 'SpaceGrotesk-Regular',
   },
 
   registerLink: {
     color: '#1F2937',
     fontSize: 14,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
   },
 
   /* decorations */
@@ -262,4 +262,4 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 120,
     borderTopRightRadius: 120,
   },
-})
+});

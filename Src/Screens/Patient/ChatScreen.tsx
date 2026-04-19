@@ -15,6 +15,8 @@ import {
   Platform,
   TextInput,
 } from 'react-native';
+
+import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -132,23 +134,43 @@ export default function ChatScreen() {
     loadMaleVoices();
   }, []);
 
-  const speakMessage = async (id: string, text: string) => {
-    try {
-      if (speakingId === id) {
-        await Speech.stop();
-        setSpeakingId(null);
-        return;
-      }
+ const speakMessage = async (id: string, text: string) => {
+  try {
+    // If SAME message tapped again → STOP
+    if (speakingId === id) {
       await Speech.stop();
-      setSpeakingId(id);
-      await Speech.speak(text, { voice: 'en-us-x-tpd-network', rate: 0.9, pitch: 0.9 });
       setSpeakingId(null);
-    } catch (error) {
-      console.log('Speech error:', error);
-      setSpeakingId(null);
+      return;
     }
-  };
 
+    // If DIFFERENT message tapped → stop previous first
+    if (speakingId !== null) {
+      await Speech.stop();
+    }
+
+    // Start new speech
+    setSpeakingId(id);
+
+    Speech.speak(text, {
+      voice: 'en-us-x-tpd-network',
+      rate: 0.9,
+      pitch: 0.9,
+      onDone: () => {
+        setSpeakingId(null);
+      },
+      onStopped: () => {
+        setSpeakingId(null);
+      },
+      onError: () => {
+        setSpeakingId(null);
+      },
+    });
+
+  } catch (error) {
+    console.log('Speech error:', error);
+    setSpeakingId(null);
+  }
+};
 
   // ───────────────────────────────────────────────────────────
   // 🔄 Focus effect
@@ -334,9 +356,10 @@ const removeAttachment = (id: string) => {
     return (
       <SafeAreaView style={styles.safeArea} edges={['top', 'bottom']}>
         <KeyboardAvoidingView
-          style={{ flex: 1 }}
-          behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-        >
+            style={{ flex: 1 }}
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
+          >
 
           {/* ── Header ── */}
           <View style={styles.chatHeader}>
@@ -364,6 +387,7 @@ const removeAttachment = (id: string) => {
 
           {/* ── Messages ── */}
           <FlatList
+            keyboardShouldPersistTaps="handled"
             ref={flatListRef}
             data={session}
             keyExtractor={item => item.id}
@@ -541,10 +565,12 @@ const removeAttachment = (id: string) => {
   // ───────────────────────────────────────────────────────────
   return (
     <SafeAreaView style={styles.safeArea} edges={['top']}>
+      
       <KeyboardAvoidingView
-        style={{ flex: 1 }}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-      >
+          style={{ flex: 1 }}
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+          keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
+        >
 
         {/* ── Welcome Header ── */}
         <View style={styles.welcomeHeader}>
@@ -743,7 +769,7 @@ const styles = StyleSheet.create({
 
   chatHeaderEyebrow: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     letterSpacing: 2,
     textTransform: 'uppercase',
@@ -752,7 +778,7 @@ const styles = StyleSheet.create({
 
   chatHeaderTitle: {
     fontSize: 34,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
     lineHeight: 38,
   },
@@ -778,7 +804,7 @@ const styles = StyleSheet.create({
 
   sessionLabel: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: '#22C55E',
     letterSpacing: 0.5,
   },
@@ -837,7 +863,7 @@ const styles = StyleSheet.create({
 
   greeting: {
     fontSize: 14,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
     letterSpacing: 0.5,
   },
@@ -860,14 +886,14 @@ const styles = StyleSheet.create({
 
   hello: {
     fontSize: 20,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     marginBottom: 4,
   },
 
   name: {
     fontSize: 44,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
     lineHeight: 50,
   },
@@ -899,7 +925,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 18,
     lineHeight: 26,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: '#666',
     textAlign: 'center',
     marginBottom: 24,
@@ -923,7 +949,7 @@ const styles = StyleSheet.create({
 
   chipText: {
     fontSize: 14,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 
@@ -955,7 +981,7 @@ const styles = StyleSheet.create({
   tapLabel: {
     marginTop: 10,
     fontSize: 20,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     letterSpacing: 0.5,
     color: DARK,
   },
@@ -963,7 +989,7 @@ const styles = StyleSheet.create({
   listeningLabel: {
     marginTop: 10,
     fontSize: 20,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     letterSpacing: 0.5,
     color: DARK,
   },
@@ -1034,7 +1060,7 @@ const styles = StyleSheet.create({
 
   bubbleRole: {
     fontSize: 11,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: MUTED,
     letterSpacing: 0.8,
   },
@@ -1045,18 +1071,18 @@ const styles = StyleSheet.create({
   },
 
   bubbleTextUser: {
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: DARK,
   },
 
   bubbleTextAssistant: {
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: '#333',
   },
 
   bubbleTime: {
     fontSize: 11,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     marginTop: 6,
     textAlign: 'right',
@@ -1093,7 +1119,7 @@ const styles = StyleSheet.create({
 
   typingText: {
     fontSize: 14,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
   },
 
@@ -1145,7 +1171,7 @@ const styles = StyleSheet.create({
     paddingTop:    Platform.OS === 'ios' ? 13 : 9,
     paddingBottom: Platform.OS === 'ios' ? 13 : 9,
     fontSize: 16,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: DARK,
   },
 
@@ -1220,7 +1246,7 @@ attachMenu: {
 
   attachMenuLabel: {
     fontSize: 12,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
     letterSpacing: 0.4,
   },
@@ -1275,7 +1301,7 @@ attachMenu: {
   attachChipName: {
     flex: 1,
     fontSize: 12,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: DARK,
   },
 

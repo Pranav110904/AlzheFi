@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
 
   headerEyebrow: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',   // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Regular',   // ✅ FIXED
     color: MUTED,
     letterSpacing: 2,
     textTransform: 'uppercase',
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
 
   headerTitle: {
     fontSize: 34,
-    fontFamily: 'Coolvetica-Heavy-Regular',  // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Bold',  // ✅ FIXED
     color: DARK,
   },
 
@@ -255,13 +255,13 @@ const styles = StyleSheet.create({
 
   avatarText: {
     fontSize: 32,
-    fontFamily: 'Coolvetica-Heavy-Regular', // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Bold', // ✅ FIXED
     color: YELLOW,
   },
 
   profileName: {
     fontSize: 26,
-    fontFamily: 'Coolvetica-Heavy-Regular', // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Bold', // ✅ FIXED
     color: DARK,
   },
 
@@ -278,13 +278,13 @@ const styles = StyleSheet.create({
 
   roleBadgeText: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Bold',   // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Bold',   // ✅ FIXED
     color: DARK,
   },
 
   profileEmail: {
     fontSize: 14,
-    fontFamily: 'Coolvetica-Regular',  // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Regular',  // ✅ FIXED
     color: MUTED,
   },
 
@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
 
   sectionTitle: {
     fontSize: 20,
-    fontFamily: 'Coolvetica-Heavy-Regular', // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Bold', // ✅ FIXED
     color: DARK,
     marginBottom: 10,
   },
@@ -323,13 +323,13 @@ const styles = StyleSheet.create({
 
   rowLabel: {
     fontSize: 16,
-    fontFamily: 'Coolvetica-Bold',   // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Bold',   // ✅ FIXED
     color: DARK,
   },
 
   rowValue: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',  // ✅ FIXED
+    fontFamily: 'SpaceGrotesk-Regular',  // ✅ FIXED
     color: MUTED,
   },
 });

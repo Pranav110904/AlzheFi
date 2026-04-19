@@ -161,24 +161,32 @@ export default function ProfileScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: BG  ,paddingBottom: 50 },
+  container: { flex: 1, backgroundColor: BG, paddingBottom: 50 },
 
   header: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
     paddingHorizontal: 26, paddingTop: 10, paddingBottom: 18,
   },
+
   headerEyebrow: {
-    fontSize: 13, fontFamily: 'Coolvetica-Regular', color: MUTED,
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: MUTED,
     letterSpacing: 2, textTransform: 'uppercase', marginBottom: 4,
   },
-  headerTitle: { fontSize: 34, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK, lineHeight: 38 },
+
+  headerTitle: {
+    fontSize: 34, fontFamily: 'SpaceGrotesk-Bold', color: DARK, lineHeight: 38
+  },
+
   editBtn: {
     flexDirection: 'row', alignItems: 'center', gap: 6,
     backgroundColor: YELLOW, paddingHorizontal: 16, paddingVertical: 10,
     borderRadius: 24, borderWidth: 1.5, borderColor: DARK,
     shadowColor: DARK, shadowOpacity: 0.1, shadowRadius: 8, elevation: 4,
   },
-  editBtnText: { fontSize: 15, fontFamily: 'Coolvetica-Bold', color: DARK },
+
+  editBtnText: {
+    fontSize: 15, fontFamily: 'SpaceGrotesk-Bold', color: DARK
+  },
 
   accentBar: { flexDirection: 'row', paddingHorizontal: 26, gap: 6, marginBottom: 20 },
   accentLine: { height: 3, flex: 1, backgroundColor: YELLOW, borderRadius: 4 },
@@ -191,56 +199,118 @@ const styles = StyleSheet.create({
     padding: 24, alignItems: 'center', marginBottom: 24,
     shadowColor: DARK, shadowOpacity: 0.06, shadowRadius: 12, elevation: 4,
   },
+
   avatarRing: {
     width: 92, height: 92, borderRadius: 46, backgroundColor: YELLOW,
     justifyContent: 'center', alignItems: 'center',
     borderWidth: 2, borderColor: DARK, marginBottom: 16,
     shadowColor: DARK, shadowOpacity: 0.15, shadowRadius: 10, elevation: 6,
   },
-  avatar: { width: 76, height: 76, borderRadius: 38, backgroundColor: DARK, justifyContent: 'center', alignItems: 'center' },
-  avatarText: { fontSize: 32, fontFamily: 'Coolvetica-Heavy-Regular', color: YELLOW },
-  profileName: { fontSize: 26, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK, marginBottom: 8 },
+
+  avatar: {
+    width: 76, height: 76, borderRadius: 38,
+    backgroundColor: DARK, justifyContent: 'center', alignItems: 'center'
+  },
+
+  avatarText: {
+    fontSize: 32, fontFamily: 'SpaceGrotesk-Bold', color: YELLOW
+  },
+
+  profileName: {
+    fontSize: 26, fontFamily: 'SpaceGrotesk-Bold', color: DARK, marginBottom: 8
+  },
+
   roleBadge: {
     flexDirection: 'row', alignItems: 'center', gap: 6,
     backgroundColor: YELLOW + '55', paddingHorizontal: 14, paddingVertical: 6,
     borderRadius: 20, borderWidth: 1.5, borderColor: DARK, marginBottom: 10,
   },
-  roleBadgeText: { fontSize: 13, fontFamily: 'Coolvetica-Bold', color: DARK },
-  profileEmail: { fontSize: 14, fontFamily: 'Coolvetica-Regular', color: MUTED },
+
+  roleBadgeText: {
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Bold', color: DARK
+  },
+
+  profileEmail: {
+    fontSize: 14, fontFamily: 'SpaceGrotesk-Regular', color: MUTED
+  },
 
   statsRow: { flexDirection: 'row', gap: 10, marginBottom: 28 },
+
   statCard: {
     flex: 1, backgroundColor: WHITE, borderRadius: 18, borderWidth: 1.5,
     borderColor: BORDER, padding: 14, alignItems: 'center',
     shadowColor: DARK, shadowOpacity: 0.05, shadowRadius: 8, elevation: 2,
   },
-  statIconWrap: { width: 42, height: 42, borderRadius: 12, justifyContent: 'center', alignItems: 'center', marginBottom: 8 },
-  statValue: { fontSize: 22, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK, marginBottom: 2 },
-  statLabel: { fontSize: 11, fontFamily: 'Coolvetica-Regular', color: MUTED, textAlign: 'center' },
+
+  statIconWrap: {
+    width: 42, height: 42, borderRadius: 12,
+    justifyContent: 'center', alignItems: 'center', marginBottom: 8
+  },
+
+  statValue: {
+    fontSize: 22, fontFamily: 'SpaceGrotesk-Bold', color: DARK, marginBottom: 2
+  },
+
+  statLabel: {
+    fontSize: 11, fontFamily: 'SpaceGrotesk-Regular', color: MUTED, textAlign: 'center'
+  },
 
   section: { marginBottom: 24 },
+
   sectionHeader: { marginBottom: 12, marginLeft: 2 },
+
   sectionEyebrow: {
-    fontSize: 11, fontFamily: 'Coolvetica-Bold', color: MUTED,
+    fontSize: 11, fontFamily: 'SpaceGrotesk-Bold', color: MUTED,
     letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 2,
   },
-  sectionTitle: { fontSize: 20, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK },
+
+  sectionTitle: {
+    fontSize: 20, fontFamily: 'SpaceGrotesk-Bold', color: DARK
+  },
+
   sectionCard: {
     backgroundColor: WHITE, borderRadius: 18, borderWidth: 1.5,
     borderColor: BORDER, overflow: 'hidden',
     shadowColor: DARK, shadowOpacity: 0.05, shadowRadius: 10, elevation: 2,
   },
 
-  row: { flexDirection: 'row', alignItems: 'center', paddingVertical: 14, paddingHorizontal: 16, gap: 14 },
-  rowIcon: { width: 42, height: 42, borderRadius: 12, justifyContent: 'center', alignItems: 'center' },
+  row: {
+    flexDirection: 'row', alignItems: 'center',
+    paddingVertical: 14, paddingHorizontal: 16, gap: 14
+  },
+
+  rowIcon: {
+    width: 42, height: 42, borderRadius: 12,
+    justifyContent: 'center', alignItems: 'center'
+  },
+
   rowInfo: { flex: 1 },
-  rowLabel: { fontSize: 16, fontFamily: 'Coolvetica-Bold', color: DARK },
-  rowValue: { fontSize: 13, fontFamily: 'Coolvetica-Regular', color: MUTED, marginTop: 2 },
+
+  rowLabel: {
+    fontSize: 16, fontFamily: 'SpaceGrotesk-Bold', color: DARK
+  },
+
+  rowValue: {
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: MUTED, marginTop: 2
+  },
+
   divider: { height: 1, backgroundColor: BORDER, marginLeft: 72 },
 
   appInfo: { alignItems: 'center', paddingVertical: 70, gap: 4 },
-  appInfoBadge: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4 },
-  appInfoName: { fontSize: 15, fontFamily: 'Coolvetica-Bold', color: DARK },
-  appVersion: { fontSize: 13, fontFamily: 'Coolvetica-Regular', color: MUTED },
-  appCopyright: { fontSize: 12, fontFamily: 'Coolvetica-Regular', color: MUTED },
+
+  appInfoBadge: {
+    flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4
+  },
+
+  appInfoName: {
+    fontSize: 15, fontFamily: 'SpaceGrotesk-Bold', color: DARK
+  },
+
+  appVersion: {
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: MUTED
+  },
+
+  appCopyright: {
+    fontSize: 12, fontFamily: 'SpaceGrotesk-Regular', color: MUTED
+  },
 });

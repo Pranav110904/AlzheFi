@@ -338,7 +338,7 @@ function AddMemoryModal({
           <View style={styles.forPatientBanner}>
             <Icon name="account-heart-outline" size={14} color={TEAL} />
             <Text style={styles.forPatientText}>
-              For <Text style={{ fontFamily: 'Coolvetica-Bold' }}>{patientName}</Text>
+              For <Text style={{ fontFamily: 'SpaceGrotesk-Bold' }}>{patientName}</Text>
             </Text>
           </View>
 
@@ -899,7 +899,7 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: BG, paddingBottom: 110 },
 
   centerLoader: { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 12 },
-  centerLoaderText: { fontSize: 15, fontFamily: 'Coolvetica-Regular', color: MUTED },
+  centerLoaderText: { fontSize: 15, fontFamily: 'SpaceGrotesk-Regular', color: MUTED },
 
   // ── Header ──
   header: {
@@ -907,10 +907,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 26, paddingTop: 10, paddingBottom: 18,
   },
   headerEyebrow: {
-    fontSize: 13, fontFamily: 'Coolvetica-Regular', color: MUTED,
+    fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: MUTED,
     letterSpacing: 2, textTransform: 'uppercase', marginBottom: 4,
   },
-  headerTitle: { fontSize: 34, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK, lineHeight: 38 },
+  headerTitle: { fontSize: 34, fontFamily: 'SpaceGrotesk-Bold', color: DARK, lineHeight: 38 },
 
   // ── Accent bar ──
   accentBar: { flexDirection: 'row', paddingHorizontal: 26, gap: 6, marginBottom: 14 },
@@ -927,41 +927,41 @@ const styles = StyleSheet.create({
   },
   patientSelectorLeft: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   patientSelectorLabel: {
-    fontSize: 11, fontFamily: 'Coolvetica-Regular', color: MUTED,
+    fontSize: 11, fontFamily: 'SpaceGrotesk-Regular', color: MUTED,
     textTransform: 'uppercase', letterSpacing: 1,
   },
-  patientSelectorName: { fontSize: 17, fontFamily: 'Coolvetica-Bold', color: DARK },
+  patientSelectorName: { fontSize: 17, fontFamily: 'SpaceGrotesk-Bold', color: DARK },
   switchBadge: {
     flexDirection: 'row', alignItems: 'center', gap: 5,
     backgroundColor: TEAL + '18', paddingHorizontal: 10, paddingVertical: 6,
     borderRadius: 12, borderWidth: 1, borderColor: TEAL + '44',
   },
-  switchBadgeText: { fontSize: 12, fontFamily: 'Coolvetica-Bold', color: TEAL },
+  switchBadgeText: { fontSize: 12, fontFamily: 'SpaceGrotesk-Bold', color: TEAL },
 
   // ── Avatar ──
   avatar: {
     backgroundColor: TEAL + '22', borderWidth: 1.5, borderColor: TEAL + '55',
     justifyContent: 'center', alignItems: 'center',
   },
-  avatarText: { fontFamily: 'Coolvetica-Bold', color: TEAL },
+  avatarText: { fontFamily: 'SpaceGrotesk-Bold', color: TEAL },
 
   // ── Patient selector sheet ──
-  selectorTitle: { fontSize: 26, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK, marginBottom: 4 },
-  selectorSubtitle: { fontSize: 14, fontFamily: 'Coolvetica-Regular', color: MUTED, marginBottom: 20 },
+  selectorTitle: { fontSize: 26, fontFamily: 'SpaceGrotesk-Bold', color: DARK, marginBottom: 4 },
+  selectorSubtitle: { fontSize: 14, fontFamily: 'SpaceGrotesk-Regular', color: MUTED, marginBottom: 20 },
   patientRow: {
     flexDirection: 'row', alignItems: 'center', gap: 14,
     backgroundColor: WHITE, borderRadius: 16, borderWidth: 1.5, borderColor: BORDER,
     paddingHorizontal: 16, paddingVertical: 14, marginBottom: 10,
   },
   patientRowSelected: { borderColor: TEAL, backgroundColor: TEAL + '08' },
-  patientName: { fontSize: 16, fontFamily: 'Coolvetica-Bold', color: DARK, marginBottom: 2 },
-  patientEmail: { fontSize: 13, fontFamily: 'Coolvetica-Regular', color: MUTED },
+  patientName: { fontSize: 16, fontFamily: 'SpaceGrotesk-Bold', color: DARK, marginBottom: 2 },
+  patientEmail: { fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: MUTED },
   selectedCheck: {
     width: 26, height: 26, borderRadius: 13, backgroundColor: TEAL,
     justifyContent: 'center', alignItems: 'center',
   },
   noPatients: { alignItems: 'center', gap: 10, paddingVertical: 32 },
-  noPatientsText: { fontSize: 15, fontFamily: 'Coolvetica-Regular', color: MUTED },
+  noPatientsText: { fontSize: 15, fontFamily: 'SpaceGrotesk-Regular', color: MUTED },
 
   // ── Tabs ──
   tabsContainer: { flexDirection: 'row', paddingHorizontal: 24, paddingBottom: 16, gap: 8 },
@@ -971,7 +971,7 @@ const styles = StyleSheet.create({
     alignItems: 'center', justifyContent: 'center',
   },
   tabActive: { backgroundColor: YELLOW, borderColor: DARK },
-  tabLabel: { fontSize: 11, fontFamily: 'Coolvetica-Bold', color: MUTED, letterSpacing: 0.5 },
+  tabLabel: { fontSize: 11, fontFamily: 'SpaceGrotesk-Bold', color: MUTED, letterSpacing: 0.5 },
   tabLabelActive: { color: DARK },
 
   // ── Scroll ──
@@ -988,23 +988,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center', alignItems: 'center', marginBottom: 14,
   },
   infoTitle: {
-    fontSize: 22, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK,
+    fontSize: 22, fontFamily: 'SpaceGrotesk-Bold', color: DARK,
     marginBottom: 8, textAlign: 'center',
   },
   infoSubtitle: {
-    fontSize: 14, fontFamily: 'Coolvetica-Regular', color: MUTED,
+    fontSize: 14, fontFamily: 'SpaceGrotesk-Regular', color: MUTED,
     textAlign: 'center', lineHeight: 21, marginBottom: 20,
   },
   infoFields: { alignSelf: 'stretch', gap: 8, marginBottom: 22 },
   infoFieldRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   infoFieldDot: { width: 6, height: 6, borderRadius: 3, backgroundColor: YELLOW, borderWidth: 1, borderColor: DARK },
-  infoFieldText: { fontSize: 14, fontFamily: 'Coolvetica-Regular', color: DARK },
+  infoFieldText: { fontSize: 14, fontFamily: 'SpaceGrotesk-Regular', color: DARK },
   infoBtn: {
     flexDirection: 'row', alignItems: 'center', gap: 8,
     backgroundColor: YELLOW, borderWidth: 1.5, borderColor: DARK,
     borderRadius: 22, paddingHorizontal: 28, paddingVertical: 14,
   },
-  infoBtnText: { fontSize: 16, fontFamily: 'Coolvetica-Bold', color: DARK },
+  infoBtnText: { fontSize: 16, fontFamily: 'SpaceGrotesk-Bold', color: DARK },
 
   // ── Category pills ──
   catPill: {
@@ -1013,7 +1013,7 @@ const styles = StyleSheet.create({
     borderWidth: 1.5, borderColor: BORDER,
   },
   catPillActive: { backgroundColor: YELLOW, borderColor: DARK },
-  catPillText: { fontSize: 13, fontFamily: 'Coolvetica-Bold', color: MUTED },
+  catPillText: { fontSize: 13, fontFamily: 'SpaceGrotesk-Bold', color: MUTED },
   catPillTextActive: { color: DARK },
 
   // ── Image upload ──
@@ -1026,8 +1026,8 @@ const styles = StyleSheet.create({
     width: 44, height: 44, borderRadius: 14,
     backgroundColor: BORDER, justifyContent: 'center', alignItems: 'center',
   },
-  uploadText: { fontSize: 14, fontFamily: 'Coolvetica-Bold', color: MUTED },
-  uploadSub: { fontSize: 11, fontFamily: 'Coolvetica-Regular', color: MUTED },
+  uploadText: { fontSize: 14, fontFamily: 'SpaceGrotesk-Bold', color: MUTED },
+  uploadSub: { fontSize: 11, fontFamily: 'SpaceGrotesk-Regular', color: MUTED },
   thumbRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   thumb: { width: 72, height: 72, borderRadius: 12, borderWidth: 1.5, borderColor: BORDER },
   thumbRemove: {
@@ -1059,7 +1059,7 @@ const styles = StyleSheet.create({
     backgroundColor: BG, justifyContent: 'center', alignItems: 'center',
   },
   iconWrapActive: { backgroundColor: WHITE + '99' },
-  iconLabel: { fontSize: 10, fontFamily: 'Coolvetica-Bold', color: MUTED, textAlign: 'center' },
+  iconLabel: { fontSize: 10, fontFamily: 'SpaceGrotesk-Bold', color: MUTED, textAlign: 'center' },
   iconLabelActive: { color: DARK },
 
   // ── Empty / Footer ──
@@ -1068,16 +1068,16 @@ const styles = StyleSheet.create({
     width: 90, height: 90, borderRadius: 28, backgroundColor: WHITE,
     borderWidth: 1.5, borderColor: BORDER, justifyContent: 'center', alignItems: 'center', marginBottom: 8,
   },
-  emptyTitle: { fontSize: 22, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK },
+  emptyTitle: { fontSize: 22, fontFamily: 'SpaceGrotesk-Bold', color: DARK },
   emptySubtitle: {
-    fontSize: 15, fontFamily: 'Coolvetica-Regular', color: MUTED,
+    fontSize: 15, fontFamily: 'SpaceGrotesk-Regular', color: MUTED,
     textAlign: 'center', paddingHorizontal: 40,
   },
   footerHint: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
     gap: 6, marginTop: 24,
   },
-  footerHintText: { fontSize: 12, fontFamily: 'Coolvetica-Regular', color: MUTED },
+  footerHintText: { fontSize: 12, fontFamily: 'SpaceGrotesk-Regular', color: MUTED },
 
   // ── For patient banner ──
   forPatientBanner: {
@@ -1086,7 +1086,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12, paddingVertical: 6,
     borderRadius: 12, borderWidth: 1, borderColor: TEAL + '33', marginBottom: 16,
   },
-  forPatientText: { fontSize: 13, fontFamily: 'Coolvetica-Regular', color: TEAL },
+  forPatientText: { fontSize: 13, fontFamily: 'SpaceGrotesk-Regular', color: TEAL },
 });
 
 const modal = StyleSheet.create({
@@ -1107,26 +1107,26 @@ const modal = StyleSheet.create({
     flexDirection: 'row', alignItems: 'center',
     justifyContent: 'space-between', marginBottom: 20,
   },
-  title: { fontSize: 26, fontFamily: 'Coolvetica-Heavy-Regular', color: DARK },
+  title: { fontSize: 26, fontFamily: 'SpaceGrotesk-Bold', color: DARK },
   fieldLabel: {
-    fontSize: 11, fontFamily: 'Coolvetica-Bold', color: MUTED,
+    fontSize: 11, fontFamily: 'SpaceGrotesk-Bold', color: MUTED,
     letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 8,
   },
   inputLarge: {
     backgroundColor: WHITE, borderWidth: 1.5, borderColor: BORDER,
     borderRadius: 16, paddingHorizontal: 18, paddingVertical: 16,
-    fontSize: 18, fontFamily: 'Coolvetica-Regular', color: DARK,
+    fontSize: 18, fontFamily: 'SpaceGrotesk-Regular', color: DARK,
     marginBottom: 16, minHeight: 70,
   },
   input: {
     backgroundColor: WHITE, borderWidth: 1.5, borderColor: BORDER,
     borderRadius: 16, paddingHorizontal: 18, paddingVertical: 14,
-    fontSize: 16, fontFamily: 'Coolvetica-Regular', color: DARK, marginBottom: 16,
+    fontSize: 16, fontFamily: 'SpaceGrotesk-Regular', color: DARK, marginBottom: 16,
   },
   saveBtn: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
     gap: 8, backgroundColor: DARK, borderWidth: 1.5, borderColor: DARK,
     borderRadius: 18, paddingVertical: 16, marginTop: 20, marginBottom: 8,
   },
-  saveBtnText: { fontSize: 16, fontFamily: 'Coolvetica-Bold', color: YELLOW },
+  saveBtnText: { fontSize: 16, fontFamily: 'SpaceGrotesk-Bold', color: YELLOW },
 });

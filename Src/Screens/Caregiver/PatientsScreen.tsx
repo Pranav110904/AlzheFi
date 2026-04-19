@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
   },
   headerEyebrow: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     letterSpacing: 2,
     textTransform: 'uppercase',
@@ -308,7 +308,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 34,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
     lineHeight: 38,
   },
@@ -329,7 +329,7 @@ const styles = StyleSheet.create({
   },
   linkBtnText: {
     fontSize: 15,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 
@@ -361,7 +361,7 @@ const styles = StyleSheet.create({
   },
   statChipText: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 
@@ -393,7 +393,7 @@ const styles = StyleSheet.create({
   },
   cardName: {
     fontSize: 20,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
     marginBottom: 5,
   },
@@ -414,7 +414,7 @@ const styles = StyleSheet.create({
   },
   avatarText: {
     fontSize: 22,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
   avatarTextDark: {
@@ -436,7 +436,7 @@ const styles = StyleSheet.create({
   },
   roleBadgeText: {
     fontSize: 11,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
 
@@ -475,19 +475,19 @@ const styles = StyleSheet.create({
   },
   infoLabel: {
     fontSize: 10,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: MUTED,
     letterSpacing: 1.2,
     marginBottom: 4,
   },
   infoValue: {
     fontSize: 16,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
   infoSub: {
     fontSize: 11,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     marginTop: 2,
   },
@@ -517,12 +517,12 @@ const styles = StyleSheet.create({
   reminderInfo: { flex: 1 },
   reminderTitle: {
     fontSize: 14,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
   reminderMeta: {
     fontSize: 11,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     marginTop: 2,
   },
@@ -535,7 +535,7 @@ const styles = StyleSheet.create({
   },
   impPillText: {
     fontSize: 11,
-    fontFamily: 'Coolvetica-Bold',
+    fontFamily: 'SpaceGrotesk-Bold',
   },
 
   // No reminder
@@ -552,7 +552,7 @@ const styles = StyleSheet.create({
   },
   noReminderText: {
     fontSize: 13,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
   },
 
@@ -577,12 +577,12 @@ const styles = StyleSheet.create({
   },
   emptyTitle: {
     fontSize: 22,
-    fontFamily: 'Coolvetica-Heavy-Regular',
+    fontFamily: 'SpaceGrotesk-Bold',
     color: DARK,
   },
   emptySubtitle: {
     fontSize: 14,
-    fontFamily: 'Coolvetica-Regular',
+    fontFamily: 'SpaceGrotesk-Regular',
     color: MUTED,
     textAlign: 'center',
     paddingHorizontal: 40,
